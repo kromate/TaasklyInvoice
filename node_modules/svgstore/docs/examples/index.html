@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<title>Example</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			padding: 12%;
+			text-align: center;
+		}
+		svg {
+			display: inline-block;
+			height: 12em;
+			width: 12em;
+		}
+	</style>
+
+	<!--
+	 ! IE and Safari need a little bit of help.
+	 ! https://jonathantneal.github.io/svg4everybody/
+	 !-->
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<script src="./vendor/svg4everybody.js"></script>
+	<script>svg4everybody();</script>
+
+</head>
+<body>
+
+	<svg role="img"><use xlink:href="./sprites.svg#unicorn" /></svg>
+	<svg role="img"><use xlink:href="./sprites.svg#rainbow" /></svg>
+
+	<p><small>Icons by <a href="http://emojione.com/">Emoji One</a></small></p>
+
+</body>
+</html>
