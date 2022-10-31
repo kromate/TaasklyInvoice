@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [eslintPlugin({
-			useEslintrc:true
+			useEslintrc: true
 		})],
 				resolve: {
 		alias: {
