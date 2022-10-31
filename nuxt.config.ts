@@ -36,7 +36,9 @@ export default defineNuxtConfig({
 		middleware: './src/middleware'
 	},
 	vite: {
-		plugins: [eslintPlugin()],
+		plugins: [eslintPlugin({
+			useEslintrc:true
+		})],
 				resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url))
