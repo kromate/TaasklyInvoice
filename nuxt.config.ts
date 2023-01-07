@@ -1,10 +1,10 @@
 import { fileURLToPath, URL } from 'node:url'
-import { defineNuxtConfig } from 'nuxt'
 import eslintPlugin from 'vite-plugin-eslint'
 
-export default defineNuxtConfig({
+export default {
 	ssr: false,
 	target: 'static',
+	app: {
 	head: {
 		title: 'Traq',
 		htmlAttrs: { lang: 'en' },
@@ -14,7 +14,9 @@ export default defineNuxtConfig({
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+	}
 	},
+
 	alias: {
 		'@': './src'
 	},
@@ -35,14 +37,22 @@ export default defineNuxtConfig({
 		pages: './src/pages',
 		middleware: './src/middleware'
 	},
+	tailwindcss: {
+		cssPath: '@/assets/css/main.css'
+	},
 	vite: {
-		plugins: [eslintPlugin({
-			useEslintrc: true
-		})],
-				resolve: {
-		alias: {
-			'@': fileURLToPath(new URL('./src', import.meta.url))
+		plugins: [
+			eslintPlugin({ useEslintrc: true })
+		],
+		server: {
+			watch: {
+				usePolling: true
+			}
+		},
+		resolve: {
+			alias: {
+				'@': fileURLToPath(new URL('./src', import.meta.url))
+			}
 		}
 	}
-	}
-})
+}
