@@ -6,7 +6,7 @@ export default {
 	target: 'static',
 	app: {
 	head: {
-		title: 'Traq',
+		title: 'Test',
 		htmlAttrs: { lang: 'en' },
 		meta: [
 			{ charset: 'utf-8' },
@@ -26,6 +26,7 @@ export default {
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
 	],
+	modules: ['@nuxtjs/tailwindcss'],
 
 	build: {
 		postcss: {
