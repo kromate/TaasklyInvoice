@@ -26,7 +26,7 @@ export default {
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
 	],
-	modules: ['@nuxtjs/tailwindcss'],
+	modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-pdf'],
 
 	build: {
 		postcss: {

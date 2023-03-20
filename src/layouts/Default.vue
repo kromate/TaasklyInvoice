@@ -1,8 +1,7 @@
 <template>
-	<div>
-		This is the default layout
+	<section>
 		<slot />
-	</div>
+	</section>
 </template>
 
 <script setup lang="ts"></script>
