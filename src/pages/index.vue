@@ -1,33 +1,65 @@
 
 <template>
-	<main class="flex flex-col gap-6 justify-center items-center md:p-12 py-12 px-4 relative">
-		<div ref="pdfSection" class="holder w-[600px] max-w-[100vw] h-full border relative bg-white">
-			<img id="cert" src="/certificate.jpeg" alt="certificate" class="">
-			<div ref="el" class="fixed  top-0 py-4 px-2 flex" :style="style">
-				<span ref="handle" class="mr-1 cursor-move">👋🏾 </span>	<div contentEditable="true" class="outline-none">
-					Anthony akpan
+	<main class="grid grid-cols-2">
+		<section>
+			<form id="form" ref="form" class="w-full bg-white p-8 gap-6 flex flex-col rounded-2xl">
+				<h1 class="text-[#0B101F] text-center text-[32px] font-bold">
+					Generate cert
+				</h1>
+				<div class="field relative">
+					<label for="size_of_employee">Select School</label>
+					<select id="schools-select" v-model="selectedSchool" class="input-field" required>
+						<option v-for="school in schools" :key="school.name" :value="school">
+							{{ school.school }}
+						</option>
+					</select>
 				</div>
+				<div class="field relative">
+					<label for="size_of_employee">Select Track</label>
+					<select id="schools-select" v-model="selectedTrack" class="input-field" required>
+						<option v-for="track in tracks" :key="track" :value="track">
+							{{ track }}
+						</option>
+					</select>
+				</div>
+				<div class="field relative">
+					<label for="second_name">Name</label>
+					<input
+						id="name"
+						v-model="name"
+						type="text"
+						placeholder="Full name"
+						name="Name"
+						class="input-field"
+						required
+					>
+				</div>
+			</form>
+		</section>
+		<section class="flex flex-col gap-6 justify-center items-center md:p-12 py-12 px-4 relative">
+			<div ref="pdfSection" class="holder w-auto max-w-[100vw]  border relative bg-white">
+				<Certificate :name="name" :lead="selectedSchool.name" :university="selectedSchool.school" :track="selectedTrack" />
 			</div>
-		</div>
-		<button class="bg-[#283ba4] text-white px-4 py-2 " @click="capture">
-			Generate certificate
-		</button>
+			<button class="bg-[#283ba4] text-white px-4 py-2 " @click="capture">
+				Generate certificate
+			</button>
+		</section>
 	</main>
 </template>
 
 <script setup lang="ts">
-import { useDraggable, useStorage } from '@vueuse/core'
-import html2canvas from 'html2canvas'
-const el = ref<HTMLElement | null>(null)
-const handle = ref<HTMLElement | null>(null)
-const pdfSection = ref<HTMLElement | any>(null)
-const innerWidth = window.innerWidth
-const x_coordinate = useStorage('x_coordinate', innerWidth / 4.2)
-const y_coordinate = useStorage('y_coordinate', 0)
-const { x, y, style } = useDraggable(el, {
-    initialValue: { x: x_coordinate, y: y_coordinate }
-})
 
+import html2canvas from 'html2canvas'
+const pdfSection = ref<HTMLElement | any>(null)
+const schools = [
+	{ name: 'Akpan Anthony', school: 'University of Lagos' },
+	{ name: 'Kolawole Oluwagbemileke', school: 'Babcock University' },
+	{ name: 'Moshood Kausar', school: 'OOU' }
+]
+const tracks = ['Flutter', 'Data Science', 'UI/UX', 'Cyber Security', 'DevOps', 'React']
+const selectedSchool = ref({} as any)
+const selectedTrack = ref('')
+const name = ref('')
 const capture = async () => {
 	const canvas = await html2canvas(pdfSection.value)
 	DownloadCanvasAsImage(canvas, 'certificate')
@@ -42,10 +74,6 @@ const DownloadCanvasAsImage = (canvas:HTMLCanvasElement, name:string) => {
     downloadLink.click()
 }
 
-watch([x, y], (val) => {
-	x_coordinate.value = val[0]
-	y_coordinate.value = val[1]
-})
 definePageMeta({
 	layout: 'default'
 })
