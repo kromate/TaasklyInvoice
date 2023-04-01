@@ -46,9 +46,8 @@ const generate = () => {
 	return
 	}
   const user = isRegistered[0] as any
-
-  const usersLead = leads.filter((lead:any) => {
-	  if (lead.university === user.university) {
+	const usersLead = leads.filter((lead: any) => {
+	  if (lead.university.toLowerCase() === user.university.toLowerCase()) {
 		  user.lead = lead.lead
 		user.isSchool = true
 	  return true
@@ -56,7 +55,6 @@ const generate = () => {
 	  return false
 	}
   })
-
 	if (!user.lead) {
 		user.university = 'Nigeria'
 		user.lead = 'Oluwagbemileke Kolawole'
