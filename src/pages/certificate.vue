@@ -1,7 +1,7 @@
 <template>
 	<section class="flex flex-col gap-6 justify-center items-center md:p-12 py-12 px-4 relative bg h-screen">
 		<div ref="pdfSection" class="holder w-[750px] max-w-[98vw] relative bg-white">
-			<Certificate :name="currentUser?.name" :lead="currentUser?.lead" :university="currentUser?.university" :track="currentUser?.track" />
+			<Certificate :name="currentUser?.name" :lead="currentUser?.lead" :university="currentUser?.university" :track="currentUser?.track" :is-school="currentUser?.isSchool" />
 		</div>
 		<button class="bg-[#283ba4] text-white px-4 py-2 rounded-md" @click="capture">
 			Generate certificate

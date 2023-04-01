@@ -49,12 +49,21 @@ const generate = () => {
 
   const usersLead = leads.filter((lead:any) => {
 	  if (lead.university === user.university) {
-		user.lead = lead.lead
+		  user.lead = lead.lead
+		user.isSchool = true
 	  return true
 	} else {
 	  return false
 	}
   })
+
+	if (!user.lead) {
+		user.university = 'Nigeria'
+		user.lead = 'Oluwagbemileke Kolawole'
+		user.isSchool = false
+  }
+
+//  console.log(user, registrant.length)
 
 	setUser(user)
 	useRouter().push('/certificate')

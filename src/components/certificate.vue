@@ -176,7 +176,22 @@
 
 			<text id="track" x="236" y="231" fill="#000" class="text-[9px] font-bold">{{ track }}</text>
 			<text id="lead" x="38" y="293" fill="#000" class="text-[9px] font-medium">{{ lead }}</text>
-			<text id="lead" x="38" y="306" fill="#000" class="text-[9px] font-medium">GDSC Lead, {{ university }}</text>
+			<text
+				v-if="isSchool"
+				id="lead"
+				x="38"
+				y="306"
+				fill="#000"
+				class="text-[9px] font-medium"
+			>GDSC Lead, {{ university }}</text>
+			<text
+				v-else
+				id="lead"
+				x="38"
+				y="306"
+				fill="#000"
+				class="text-[9px] font-medium"
+			>Program Coordinator</text>
 		</g>
 
 	</svg>
@@ -202,6 +217,11 @@ defineProps({
 	lead: {
 		type: String,
 		default: 'Anthony Akpan (Default)',
+		required: true
+	},
+	isSchool: {
+		type: Boolean,
+		default: true,
 		required: true
 	}
 })
