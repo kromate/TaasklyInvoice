@@ -5,3 +5,10 @@
     font-family: 'DM Sans', sans-serif;
     background: #fff;
 }
+
+.bg{
+background-color: #e5e5f7;
+opacity: 1;
+background-image: radial-gradient(#EA4335 0.5px, #e5e5f7 0.5px);
+background-size: 10px 10px;
+}
