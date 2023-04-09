@@ -21749,6 +21749,12 @@ export default [
     university: 'McPherson University',
     track: 'Devops'
   },
+    {
+    name: 'Iteoluwakiishi Bello Keziah',
+    email: 'kiishibello@gmail.com',
+    university: 'McPherson University',
+    track: 'Cybersecurity'
+  },
   {
     name: 'Badmus Mayowa',
     email: 'badmusmay@gmail.com',
