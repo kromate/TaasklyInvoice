@@ -10590,6 +10590,12 @@ export default [
     track: 'ReactJS - Frontend Development'
   },
   {
+    name: 'Victoria Tuoyor Omamara',
+    email: 'mimiomamara25@gmail.com',
+    university: 'Babcock University',
+    track: 'Flutter - Mobile Development'
+  },
+  {
     name: 'Ekoyata Harvest Efua',
     email: 'harvestekoyata@gmail.com',
     university: 'Babcock University',
