@@ -13392,6 +13392,12 @@ export default [
     track: 'Flutter - Mobile Development'
   },
   {
+    name: 'Osibanjo Abdulrahman Ayodele',
+    email: 'abdulrahman182002@gmail.com',
+    university: 'Federal University of Agriculture, Abeokuta',
+    track: 'Flutter - Mobile Development'
+  },
+  {
     name: 'BOLARINWA AHMED',
     email: 'bolarinwaahmed22@gmail.com',
     university: 'Babcock University',
@@ -22330,5 +22336,35 @@ export default [
     email: 'milekekolawole@gmail.com',
     university: 'Babcock University',
     track: 'Flutter - Mobile Development'
-  }
+  },
+    {
+    name: 'Ekemode Quazim Babatunde',
+    email: 'ekesbabsekesmall@gmail.com',
+    university: 'Others',
+    track: 'Flutter - Mobile Development'
+  },
+    {
+    name: 'SAMUEL OLAJIDE',
+    email: 'olasamuel594@gmail.com',
+    university: 'Others',
+    track: 'Flutter - Mobile Development'
+  },
+    {
+    name: 'Hamza Aliyu',
+    email: 'hamzaaliyu450@gmail.com',
+    university: 'Others',
+    track: 'Flutter - Mobile Development'
+  },
+    {
+    name: 'Richard Meshack Rotji',
+    email: 'rotji1998@gmail.com',
+    university: 'Others',
+    track: 'Flutter - Mobile Development'
+  },
+    {
+    name: 'Omamara Blossom Temisan',
+    email: 'omablossom38@gmail.com',
+    university: 'Others',
+    track: 'Flutter - Mobile Development'
+  },
 ]
