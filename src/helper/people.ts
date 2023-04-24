@@ -22361,7 +22361,7 @@ export default [
     university: 'Others',
     track: 'Flutter - Mobile Development'
   },
-    {
+  {
     name: 'Omamara Blossom Temisan',
     email: 'omablossom38@gmail.com',
     university: 'Others',
