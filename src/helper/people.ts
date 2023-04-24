@@ -3666,6 +3666,18 @@ export default [
     track: 'ReactJS - Frontend Development'
   },
   {
+    name: 'Akeju Oluwanifemi Adeola',
+    email: 'akejunifemi11@gmail.com',
+    university: 'Bells University of Technology',
+    track: 'Flutter - Mobile Development'
+  },
+  {
+    name: 'Ololade Anjuwon',
+    email: 'anjuwonololade@gmail.com',
+    university: 'Bells University of Technology',
+    track: 'Flutter - Mobile Development'
+  },
+  {
     name: 'Adefila Abdulmuiz Olamilekan',
     email: 'abdulmuizola96@gmail.com',
     university: 'Bells University of Technology',
@@ -9834,6 +9846,12 @@ export default [
     track: 'Cybersecurity'
   },
   {
+    name: 'David Onuche',
+    email: 'onuchedavid34@gmail.com',
+    university: 'Oduduwa University Ipetumodu',
+    track: 'Flutter - Mobile Development'
+  },
+  {
     name: 'Moshood Kausar',
     email: 'kausarmoshood@gmail.com',
     university: 'Oduduwa University Ipetumodu',
@@ -10552,6 +10570,12 @@ export default [
     email: 'Teelorh@gmail.com',
     university: 'Babcock University',
     track: 'Cybersecurity'
+  },
+  {
+    name: 'Okeowo Quam Olamide',
+    email: 'eltrain704@gmail.com',
+    university: 'University of Lagos',
+    track: 'Flutter - Mobile Development'
   },
   {
     name: 'Sanni Tomilola',
@@ -14634,6 +14658,18 @@ export default [
     track: 'UI/UX'
   },
   {
+    name: 'Yusuf Umar Yahaya',
+    email: 'yu742suf@gmail.com',
+    university: 'Ahmadu Bello University',
+    track: 'Flutter - Mobile Development'
+  },
+  {
+    name: 'Yusuf Umar Yahaya',
+    email: 'yusuf7umar4yahaya2@gmail.com',
+    university: 'Ahmadu Bello University',
+    track: 'Flutter - Mobile Development'
+  },
+  {
     name: 'Opomulero Roheemah Motunrayo',
     email: 'sheuroheemah@gmail.com',
     university: 'Ahmadu Bello University',
@@ -14746,6 +14782,18 @@ export default [
     email: 'idowudolapo99@gmail.com',
     university: 'Obafemi Awolowo University',
     track: 'Data Science/ML/AI'
+  },
+  {
+    name: 'Opasina Ajibola John',
+    email: 'adegokem208@gmail.com',
+    university: 'Obafemi Awolowo University',
+    track: 'Flutter - Mobile Development'
+  },
+  {
+    name: 'Adesoji Ajijolaoluwa David',
+    email: 'adesojiajijolaoluwa11@gmail.com',
+    university: 'Obafemi Awolowo University',
+    track: 'Flutter - Mobile Development'
   },
   {
     name: 'Kalejaiye Tolulope',
