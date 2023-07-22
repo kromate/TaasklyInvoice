@@ -1,6 +1,6 @@
 <template>
 	<section class="flex flex-col sub_section">
-		<div class="w-full bg-light">
+		<div class="w-full h-full bg-light">
 			d
 		</div>
 	</section>
