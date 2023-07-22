@@ -1,5 +1,6 @@
 @import url('./global.css');
 @import url('./variables.css');
+@import url('./component.scss');
 
 @tailwind base;
 @tailwind components;

@@ -6,8 +6,8 @@ export default {
 	target: 'static',
 	app: {
 		head: {
-			title: 'GDSC Bootcamp',
-			desc: 'GDSC Bootcamp',
+			title: 'Taaskly Invoice Generator',
+			desc: 'Taaskly Invoice Generator',
 			htmlAttrs: { lang: 'en' },
 			meta: [
 				{ charset: 'utf-8' },
@@ -15,14 +15,14 @@ export default {
 				{ name: 'format-detection', content: 'telephone=no' },
 				{
 					name: 'title',
-					content: 'GDSC Bootcamp'
+					content: 'Taaskly Invoice Generator'
 				},
 				{
 					name: 'description',
-					content: 'GDSC Bootcamp certificate generator'
+					content: 'Taaskly Invoice Generator'
 				}
 			],
-			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }]
 		}
 	},
 
