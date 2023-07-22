@@ -3,7 +3,7 @@
 		class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50"
 	>
 		<div
-			class="container bg-white w-auto lg:w-2/3 px-2 pt-10 lg:px-12 min-h-screen rounded-lg text-center"
+			class="container bg-white w-full md:w-1/3 px-2 pt-10 lg:px-12 min-h-screen rounded-lg text-center"
 		>
 			<div class="content">
 				<div class="flex mt-2 justify-between">
@@ -31,6 +31,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill From</label>
 							<input
+								v-model="billFrom"
 								type="text"
 								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -38,6 +39,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill To</label>
 							<input
+								v-model="billTo"
 								type="text"
 								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -48,6 +50,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Recipient Email</label>
 							<input
+								v-model="email"
 								type="text"
 								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -58,6 +61,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill Title/Project Descriptions</label>
 							<input
+								v-model="title"
 								type="text"
 								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -68,6 +72,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Issued On</label>
 							<input
+								v-model="issuedOn"
 								type="date"
 								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -75,6 +80,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Due On</label>
 							<input
+								v-model="dueOn"
 								type="date"
 								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
@@ -97,6 +103,7 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Currency</label>
 							<input
+								v-model="projectName"
 								type="text"
 								placeholder="Project Name"
 								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
@@ -131,7 +138,7 @@
 								</tr>
 							</thead>
 							<!-- Table body -->
-							<div class="overflow-x-auto">
+							<div class="">
 								<tbody>
 									<tr
 										v-for="(item, index) in items"
@@ -262,14 +269,18 @@
 					</div>
 
 					<div class="flex  justify-center lg:justify-end m-4 pb-10">
-						<v-button
+						<!-- <v-button
 							size="small"
 							:loading="loading"
 							class="py-4 text-xl "
 							type="sec"
 						>
 							Create Invoice
-						</v-button>
+						</v-button> -->
+
+						<button type="pry" class="text-white bg-primary py-4 px-4  rounded border border-gray-200 text-sm font-medium " @click="openModal">
+							Create Invoice
+						</button>
 					</div>
 				</div>
 			</div>
@@ -285,6 +296,13 @@ const emit = defineEmits(['close'])
 const text = 'Create New Invoice' // Replace with your text
 const showModal = ref(true)
 const showDeleteDropdown = ref([])
+const billFrom = ref('')
+const billTo = ref('')
+const email = ref('')
+const title = ref('')
+const dueOn = ref('')
+const issuedOn = ref('')
+const projectName = ref('')
 
 function deleteItem(index) {
   items.value.splice(index, 1)
@@ -296,6 +314,7 @@ const items = ref([
 function addItem() {
   items.value.push({ name: '', price: '', qty: '' })
 }
+
 function handleModalClose() {
   emit('close')
   showModal.value = false
@@ -311,6 +330,12 @@ const totalAmount = computed(() => {
     return total + (isNaN(price) || isNaN(qty) ? 0 : price * qty)
   }, 0)
 })
+
+// function createInvoice() {
+// 	const payload: {
+// 		billFrom: billFrom.value
+// 	}
+// }
 </script>
 
 <style scoped>
