@@ -3,7 +3,7 @@
 		class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50"
 	>
 		<div
-			class="container bg-white w-full md:w-1/3 px-2 pt-10 lg:px-12 min-h-screen rounded-lg text-center"
+			class="container bg-white w-full md:w-1/3 px-2 pt-10 lg:px-5 min-h-screen rounded-lg text-center"
 		>
 			<div class="content">
 				<div class="flex mt-2 justify-between">
