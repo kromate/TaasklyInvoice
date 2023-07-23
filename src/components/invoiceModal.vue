@@ -3,43 +3,58 @@
 		class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50"
 	>
 		<div
-			class="container bg-white w-auto lg:w-2/3 px-2 pt-10 lg:px-12 min-h-screen rounded-lg text-center"
+			class="container bg-white w-full md:w-1/3 px-2 pt-5 lg:px-4 min-h-screen rounded-lg text-center"
 		>
 			<div class="content">
 				<div class="flex mt-2 justify-between">
-					<p class="text-2xl font-bold">
+					<p class="text-lg font-bold">
 						{{ text }}
 					</p>
-					<span class="cursor-pointer" @click="handleModalClose">❌</span>
+					<span class="cursor-pointer" @click="handleModalClose">✖</span>
 				</div>
 
 				<div class="pt-5">
-					<div class="flex justify-between">
+					<div class="flex justify-between items-center">
 						<div>
-							<h2 class="lg:text-xl font-bold mb-4">
-								Invoice Details <span class="text-primary font-bold">#NRjhkfjsfsfs</span>
+							<h2 class="lg:text-2xl font-bold mb-4">
+								Invoice <span class="text-primary font-bold">#NRjhkfjsfsfs</span>
 							</h2>
 						</div>
 
-						<span class="text-gray-600 cursor-pointer">Copy link</span>
+						<div class="flex items-center gap-2 font-bold text-gray-300  cursor-pointer">
+							<svg class="h-6 w-6 " viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" fill="gray"><g stroke-width="0" /><g stroke-linecap="round" stroke-linejoin="round" /><g>
+								<g
+									fill="none"
+									fill-rule="evenodd"
+									stroke="gray"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									transform="translate(4 4)"
+								> <path d="m5.5 7.5c.96940983 1.36718798 3.01111566 1.12727011 4.01111565 0l1.98888435-2c1.1243486-1.22807966 1.1641276-2.81388365 0-4-1.135619-1.15706921-2.86438099-1.15706947-4 0l-2 2" /> <path d="m7.5 6.56977319c-.96940983-1.36718798-3-1.1970433-4-.06977319l-2 1.97487373c-1.12434863 1.22807966-1.16412758 2.83900987 0 4.02512627 1.13561901 1.1570692 2.86438099 1.1570695 4 0l2-2" /> </g> </g></svg>
+							<p class="">
+								Copy Link
+							</p>
+						</div>
 					</div>
 
-					<h1 class="text-left font-bold pb-2 pt-5 text-xl">
+					<h1 class="text-left font-bold pb-2 pt-3 text-xl">
 						Details
 					</h1>
 					<div class="grid lg:grid-cols-2 gap-4">
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill From</label>
 							<input
+								v-model="billFrom"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill To</label>
 							<input
+								v-model="billTo"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 					</div>
@@ -48,8 +63,9 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Recipient Email</label>
 							<input
+								v-model="email"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 					</div>
@@ -58,8 +74,9 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill Title/Project Descriptions</label>
 							<input
+								v-model="title"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 					</div>
@@ -68,15 +85,17 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Issued On</label>
 							<input
+								v-model="issuedOn"
 								type="date"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 						<div>
 							<label class="block mb-2 text-left font-bold">Due On</label>
 							<input
+								v-model="dueOn"
 								type="date"
-								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 
@@ -97,33 +116,34 @@
 						<div>
 							<label class="block mb-2 text-left font-bold">Currency</label>
 							<input
+								v-model="projectName"
 								type="text"
 								placeholder="Project Name"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 							>
 						</div>
 					</div>
 
 					<div>
-						<table class="w-full text-left text-gray mt-2">
+						<table class="w-full text-left text-gray-500 mt-2">
 							<!-- Table headers -->
 							<thead class="">
-								<tr class="grid grid-cols-6">
-									<th scope="col" class="block col-span-2 mb-2 text-left font-bold">
+								<tr class="grid grid-cols-11">
+									<th scope="col" class="block col-span-4 mb-2 text-left font-bold">
 										Item
 									</th>
-									<th scope="col" class="block mb-2 text-left font-bold">
+									<th scope="col" class="block mb-2 col-span-2 text-left font-bold">
 										Price
 									</th>
 									<th
 										scope="col"
-										class="block mb-2 text-left font-bold whitespace-nowrap"
+										class="block mb-2 text-left col-span-2 font-bold whitespace-nowrap"
 									>
 										Qty
 									</th>
 									<th
 										scope="col"
-										class="block mb-2 text-left font-bold whitespace-nowrap"
+										class="block mb-2 text-left col-span-2 font-bold whitespace-nowrap"
 									>
 										Total Price
 									</th>
@@ -131,47 +151,47 @@
 								</tr>
 							</thead>
 							<!-- Table body -->
-							<div class="overflow-x-auto">
+							<div class="">
 								<tbody>
 									<tr
 										v-for="(item, index) in items"
 										:key="index"
-										class="grid grid-cols-6 gap-4 pt-2"
+										class="grid grid-cols-11 gap-4 pt-2"
 									>
 										<!-- Item input -->
-										<td class="col-span-2 mb-2 md:mb-0">
+										<td class="col-span-4 mb-2 md:mb-0">
 											<input
 												v-model="item.name"
 												type="text"
 												placeholder="Company Name"
-												class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Price input -->
-										<td class="mb-2 md:mb-0">
+										<td class="mb-2 col-span-2 md:mb-0">
 											<input
 												v-model="item.price"
 												type="text"
 												placeholder="$500"
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Qty input -->
-										<td class="mb-2 md:mb-0">
+										<td class="mb-2 col-span-2 md:mb-0">
 											<input
 												v-model="item.qty"
 												type="text"
 												placeholder="1"
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Total Price input -->
-										<td class="mb-2 md:mb-0">
+										<td class="mb-2 col-span-2 md:mb-0">
 											<input
 												type="text"
 												:value="item.qty * item.price"
 												readonly
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50bg-blue-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Delete icon -->
@@ -195,7 +215,7 @@
 												</span>
 												<span
 													v-if="showDeleteDropdown[index]"
-													class="absolute mt-2 bg-white border rounded-lg shadow-md"
+													class="absolute mt-2 right-0 z-30 bg-white border rounded-lg shadow-md"
 												>
 													<ul>
 														<li
@@ -237,8 +257,21 @@
 					<div class="grid grid-cols-3 whitespace-nowrap gap-10 lg:gap-4 pt-2">
 						<div @click="addItem">
 							<span
-								class="block text-xl mb-2 text-left text-blue-500 cursor-pointer font-bold"
-							>+ Add Item</span>
+								class="flex items-center text-xl mb-2 text-left text-blue-500 cursor-pointer font-bold"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+								/> </svg> Add Item</span>
 						</div>
 						<div>
 							<span class="block mb-2 text-xl text-left font-bold text-black">Total Amount</span>
@@ -256,20 +289,24 @@
 							<textarea
 								placeholder="Write your notes here..."
 								rows="4"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 text-xl border-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 							/>
 						</div>
 					</div>
 
 					<div class="flex  justify-center lg:justify-end m-4 pb-10">
-						<v-button
+						<!-- <v-button
 							size="small"
 							:loading="loading"
 							class="py-4 text-xl "
 							type="sec"
 						>
 							Create Invoice
-						</v-button>
+						</v-button> -->
+
+						<button class="text-white bg-primary py-2 px-8  rounded-lg border border-gray-200 text-lg font-medium " @click="openModal">
+							Create Invoice
+						</button>
 					</div>
 				</div>
 			</div>
@@ -285,6 +322,13 @@ const emit = defineEmits(['close'])
 const text = 'Create New Invoice' // Replace with your text
 const showModal = ref(true)
 const showDeleteDropdown = ref([])
+const billFrom = ref('')
+const billTo = ref('')
+const email = ref('')
+const title = ref('')
+const dueOn = ref('')
+const issuedOn = ref('')
+const projectName = ref('')
 
 function deleteItem(index) {
   items.value.splice(index, 1)
@@ -296,6 +340,7 @@ const items = ref([
 function addItem() {
   items.value.push({ name: '', price: '', qty: '' })
 }
+
 function handleModalClose() {
   emit('close')
   showModal.value = false
@@ -311,6 +356,12 @@ const totalAmount = computed(() => {
     return total + (isNaN(price) || isNaN(qty) ? 0 : price * qty)
   }, 0)
 })
+
+// function createInvoice() {
+// 	const payload: {
+// 		billFrom: billFrom.value
+// 	}
+// }
 </script>
 
 <style scoped>

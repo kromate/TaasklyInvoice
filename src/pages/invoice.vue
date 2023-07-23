@@ -3,9 +3,9 @@
 		<invoiceModal v-if="showModal" @close="handleModalClose" />
 
 		<div class="flex justify-center items-center min-h-screen">
-			<v-button type="sec" @click="openModal">
+			<button type="pry" class="text-white bg-primary py-4 px-4  rounded border border-gray-200 text-sm font-medium " @click="openModal">
 				Open Modal
-			</v-button>
+			</button>
 		</div>
 	</div>
 </template>

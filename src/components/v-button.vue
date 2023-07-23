@@ -68,8 +68,8 @@ const sizes = {
 }
 const types = {
   sec: {
-    __class: '  rounded mt-10 bg-primary font-bold btn-pry',
-    text: '#fff'
+    __class: '  rounded mt-10 font-bold btn-pry'
+
   },
   pry: {
     __class:
