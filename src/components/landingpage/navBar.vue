@@ -1,5 +1,5 @@
 <template>
-	<nav class="bg-white border-gray-200 px-2 sm:px-4 py-4 rounded">
+	<nav class=" border-gray-200 px-2 sm:px-4 py-4  rounded">
 		<div class="container md:container lg:container flex flex-wrap justify-between items-center mx-auto px-3 md:px-0">
 			<a href="" aria-current="page" class="flex nuxt-link-exact-active nuxt-link-active">
 				<img src="/favicon.svg" width="72" height="24" alt="">

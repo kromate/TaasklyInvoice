@@ -581,143 +581,10 @@
 				</a>
 			</div>
 		</div>
-		<div class="bg-[#F3EFFE] py-10 faq-container">
-			<div class="mx-auto container md:container lg:container relative py-4 md:py-15 my-2 md:my-10">
-				<h1 class="text-[2.2rem] md:text-[3rem] lg:text-[3.2rem] leading-[140%] font-[500] text-[#0F172A] text-center my-5">
-					Frequently Asked Questions
-				</h1>
-				<div class="mt-10 py-10 max-w-2xl mx-auto">
-					<div class="block">
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-0" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-0" class="block text-xl cursor-pointer">
-								Is the Kippa Invoice Generator Free?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									Is the Kippa Invoice Generator Free?
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-1" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-1" class="block text-xl cursor-pointer">
-								How to generate invoices on the Kippa App?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									<div class="block my-4">
-										<span class="bg-primary text-white text-sm font-medium px-2.5 py-0.5 rounded my-4">Step 1</span>
-										<div class="my-3">
-											<p class="mb-4 text-base font-normal text-gray-500">
-												- Click on “Create your Invoice”
-											</p>
-											<p class="mb-4 text-base font-normal text-gray-500">
-												- Enter your business details (name, address, phone number, email)
-											</p>
-											<p class="mb-4 text-base font-normal text-gray-500">
-												- Enter your bank account details
-											</p>
-										</div>
-									</div>
-									<div class="block my-4">
-										<span class="bg-primary text-white text-sm font-medium px-2.5 py-0.5 rounded my-4">Step 2</span>
-										<div class="my-3">
-											<p class="mb-4 text-base font-normal text-gray-500">
-												Enter your customer's information (name, address, phone number, email)
-											</p>
-										</div>
-									</div>
-									<div class="block my-4">
-										<span class="bg-primary text-white text-sm font-medium px-2.5 py-0.5 rounded my-4">Step 3</span>
-										<div class="my-3">
-											<p class="mb-4 text-base font-normal text-gray-500">
-												Enter the product/service details (product name, invoice due date, Amount, Price, Notes, etc) and your business logo.
-											</p>
-										</div>
-									</div>
-									<a href="/create-invoice" class="text-white hidden md:block text-sm w-fit bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-7 py-2.5 text-center mr-3 mt-3 md:mr-0">
-										Generate Invoice
-									</a>
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-2" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-2" class="block text-xl cursor-pointer">
-								Can I edit all fields in the invoice?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									Yes, you can edit every single field, add your logo and even your signature.
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-3" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-3" class="block text-xl cursor-pointer">
-								Can I use my logo and business colours on my invoice?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									Yes, you can use your logo but not your business colours.
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-4" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-4" class="block text-xl cursor-pointer">
-								How can I share invoices with my customers?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									Simply download the Invoice you created and share it with your customer.
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-5" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-5" class="block text-xl cursor-pointer">
-								Can I send reminders to the people who are owing me?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									<div class="block my-4">
-										<p class="text-base font-normal text-gray-500 my-2">
-											Yes, you can do this when you download the Kippa app
-										</p>
-
-										<p class="text-base font-normal text-gray-500">
-											1 Download the Kippa app, available on App store and Play store
-										</p>
-										<p class="mb-1 text-base font-normal text-gray-500">
-											2 Create an account and follow the guidelines here.
-										</p>
-										<div class="ml-3 mb-4 mt-1 my-3 text-base font-normal text-gray-500">
-											On the home screen, click on “invoice” to generate an invoice <br>
-											Go back to the home screen and click on “debt” <br>
-											Select the customer you want to send a reminder <br>
-											Click “remind” <br>
-											Send your customized message via different channels on your mobile
-										</div>
-									</div>
-								</h4>
-							</div>
-						</div>
-						<div class="tab rounded-2xl bg-white p-6 w-full overflow-auto cursor-pointer shadow-[0px_8px_16px_rgba(17,_17,_17,_0.06)] my-5 transition-all duration-[5050ms] delay-500 ease-out">
-							<input id="tab-single-6" type="radio" name="faqTab" class="absolute opacity-0"> <label for="tab-single-6" class="block text-xl cursor-pointer">
-								How can I contact support?
-							</label>
-							<div class="tab-content overflow-hidden leading-normal">
-								<h4 class="text-base my-5">
-									<p class="text-base font-normal text-black my-2">
-										Our channels and support team are always open and available to serve you
-										Whatsapp <a href="https://wa.me/+2348034567890" target="_blank" class="text-primary">+2348034567890</a> Phone <a href="tel:2348034567890" target="_blank" class="text-primary">+2348034567890</a> Mail <a href="mailto:support@kippa.africa" class="text-primary">support@kippa.africa</a>
-									</p>
-								</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<FaqAccordion />
 		<div class="register-your-business-module bg-[linear-gradient(180deg,#f4efff,50%,#fff_50%);] py-10">
 			<div class="container md:container lg:container px-5 py-5 sm:py-15 mx-auto mt-15 mb-20">
-				<div class="bg-image rounded-3xl before:rounded-3xl p-2 sm:p-6 md:p-20 min-h-[500px] pb-0 w-full mt-20 relative before:absolute before:block before:h-full before:w-full before:top-0 before:left-0 before:pointer-events-none flex align-middle justify-center items-center" style="--get-app-bg: url(/images/grow-your-business-bg.png);">
+				<div class="bg-image rounded-3xl before:rounded-3xl p-2 sm:p-6 md:p-20 min-h-[500px] pb-0 w-full mt-20 relative before:absolute before:block before:h-full before:w-full before:top-0 before:left-0 before:pointer-events-none flex align-middle justify-center items-center" style="background-image: url(/grow-business.jpg);">
 					<div class="block">
 						<div class="w-100 text-center text-white">
 							<h1 class="text-3xl md:text-6xl font-black text-center tracking-tighter">
@@ -729,7 +596,7 @@
 								Start growing your business with Kippa now
 							</h2>
 							<div class="app-download-btns my-3 flex flex-wrap mx-auto justify-center">
-								<a id="playstorebtn2" target="_blank" href="https://kippa.africa/download"><img
+								<a id="playstorebtn2" target="_blank" href=""><img
 
 									format="webp"
 									quality="75"
@@ -740,7 +607,7 @@
 									alt="Google play download icon"
 									title="Google play download icon"
 									class="mr-3 mb-4 cursor-pointer h-10 w-auto"
-								></a> <a id="appstorebtn2" target="_blank" href="https://kippa.africa/download"><img
+								></a> <a id="appstorebtn2" target="_blank" href=""><img
 
 									format="webp"
 									quality="75"
@@ -758,195 +625,181 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="bg-white my-5 md:my-10">
-		<footer class="container md:container lg:container mx-auto p-4 bg-white sm:p-6">
-			<div class="grid grid-cols-2 md:grid-cols-5 gap-10">
-				<div>
-					<a href="#" target="_blank" class="flex items-center mb-10"><svg
-						width="93"
-						height="31"
-						viewBox="0 0 93 31"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-					>
-						<path fill="url(#logo_svg__pattern0)" d="M0 0h93v31H0z" />
-						<defs>
-							<pattern id="logo_svg__pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-								<use xlink:href="#logo_svg__image0_1868_6163" transform="matrix(.00139 0 0 .00417 -.001 0)" />
-							</pattern>
-							<image id="logo_svg__image0_1868_6163" width="722" height="240" xlink:href="data:image/png;base64,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" />
-						</defs>
-					</svg></a>
-					<div class="my-3 flex mt-4 space-x-6 sm:justify-start sm:mt-0">
-						<a id="linkedinbtn" href="https://www.linkedin.com/company/kippaafrica" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip3)">
-								<path d="M3.13696 0.365234C1.41349 0.365234 0.00292969 1.77576 0.00292969 3.49927V13.2247C0.00292969 14.9482 1.41346 16.3582 3.13696 16.3582H12.8624C14.5859 16.3582 15.9959 14.9482 15.9959 13.2247V3.49927C15.9959 1.77579 14.5859 0.365234 12.8624 0.365234H3.13696ZM3.92522 3.0044C4.75159 3.0044 5.26059 3.5469 5.27631 4.26C5.27631 4.95736 4.75155 5.51511 3.90923 5.51511H3.89373C3.08309 5.51511 2.55914 4.95739 2.55914 4.26C2.55914 3.54691 3.09895 3.0044 3.9252 3.0044H3.92522ZM11.0465 6.33736C12.6358 6.33736 13.8271 7.37611 13.8271 9.60834V13.7755H11.4119V9.88773C11.4119 8.91077 11.0623 8.24424 10.1883 8.24424C9.52101 8.24424 9.12328 8.69349 8.94866 9.12747C8.88487 9.28274 8.86919 9.49959 8.86919 9.71679V13.7755H6.45394C6.45394 13.7755 6.48563 7.18971 6.45394 6.50779H8.86968V7.53698C9.19064 7.04178 9.76475 6.33735 11.0465 6.33735V6.33736ZM2.7016 6.50832H5.11685V13.7756H2.7016V6.50832Z" fill="currentColor" />
-							</g>
-							<defs>
-								<clipPath id="clip3">
-									<rect width="16" height="16" fill="white" transform="translate(0 0.361328)" />
-								</clipPath>
-							</defs>
-						</svg></a> <a id="twitterbtn" href="https://twitter.com/kippa_africa?s=21" target="_blank" class="mr-2"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip11)">
-								<path d="M15.999 2.40282C15.5535 3.06555 15.0069 3.6305 14.3592 4.09767C14.3656 4.22296 14.3688 4.36457 14.3688 4.5225C14.3688 5.4 14.2408 6.27856 13.985 7.15818C13.7291 8.03781 13.3382 8.87977 12.8124 9.68406C12.2866 10.4884 11.6603 11.2009 10.9334 11.8217C10.2065 12.4424 9.33279 12.9374 8.31219 13.3066C7.2916 13.6757 6.19779 13.8603 5.03078 13.8603C3.20947 13.8603 1.53221 13.3686 -0.000976562 12.3852C0.271146 12.4155 0.532135 12.4307 0.78199 12.4307C2.30355 12.4307 3.66255 11.962 4.85899 11.0247C4.14955 11.0117 3.51419 10.7933 2.95292 10.3695C2.39165 9.94576 2.0054 9.40427 1.79416 8.74505C2.00295 8.78482 2.20902 8.80471 2.41238 8.80471C2.70509 8.80471 2.99311 8.76653 3.27644 8.69018C2.51934 8.53855 1.89126 8.16146 1.3922 7.55892C0.893158 6.95639 0.643637 6.26094 0.643637 5.4726V5.43197C1.10835 5.68928 1.60404 5.82614 2.1307 5.84257C1.6822 5.54357 1.32661 5.15366 1.06392 4.67285C0.801217 4.19204 0.669865 3.67172 0.669865 3.11188C0.669865 2.52145 0.817819 1.97164 1.11373 1.46246C1.93706 2.47282 2.9347 3.28033 4.10666 3.885C5.27862 4.48967 6.53592 4.82549 7.87855 4.89245C7.82128 4.6538 7.7926 4.40475 7.79249 4.14532C7.79249 3.23946 8.11306 2.46599 8.7542 1.8249C9.39534 1.18382 10.1688 0.863281 11.0747 0.863281C12.0231 0.863281 12.8219 1.20862 13.4712 1.89929C14.2131 1.75234 14.9077 1.48656 15.5551 1.10193C15.3057 1.88687 14.8251 2.49239 14.1133 2.9185C14.7675 2.84076 15.3961 2.66887 15.999 2.40282H15.999Z" fill="currentColor" />
-							</g>
-							<defs>
-								<clipPath id="clip11">
-									<rect width="16" height="12.997" fill="white" transform="translate(0 0.863281)" />
-								</clipPath>
-							</defs>
-						</svg></a> <a id="instabtn" href="https://www.instagram.com/kippaafrica/" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip23)">
-								<path d="M8.00044 5.68441C6.52589 5.68441 5.32254 6.88776 5.32254 8.36232C5.32254 9.83687 6.52589 11.0402 8.00044 11.0402C9.475 11.0402 10.6783 9.83687 10.6783 8.36232C10.6783 6.88776 9.475 5.68441 8.00044 5.68441ZM16.0321 8.36232C16.0321 7.25339 16.0422 6.1545 15.9799 5.04758C15.9176 3.76187 15.6243 2.6208 14.6841 1.68062C13.742 0.738432 12.6029 0.447138 11.3172 0.384861C10.2083 0.322584 9.10937 0.332629 8.00245 0.332629C6.89352 0.332629 5.79464 0.322584 4.68772 0.384861C3.40201 0.447138 2.26094 0.740441 1.32076 1.68062C0.378569 2.62281 0.0872744 3.76187 0.0249976 5.04758C-0.0372792 6.15651 -0.0272345 7.2554 -0.0272345 8.36232C-0.0272345 9.46924 -0.0372792 10.5701 0.0249976 11.677C0.0872744 12.9628 0.380578 14.1038 1.32076 15.044C2.26294 15.9862 3.40201 16.2775 4.68772 16.3398C5.79665 16.402 6.89553 16.392 8.00245 16.392C9.11138 16.392 10.2103 16.402 11.3172 16.3398C12.6029 16.2775 13.744 15.9842 14.6841 15.044C15.6263 14.1018 15.9176 12.9628 15.9799 11.677C16.0442 10.5701 16.0321 9.47124 16.0321 8.36232ZM8.00044 12.4826C5.72031 12.4826 3.88013 10.6425 3.88013 8.36232C3.88013 6.08218 5.72031 4.242 8.00044 4.242C10.2806 4.242 12.1208 6.08218 12.1208 8.36232C12.1208 10.6425 10.2806 12.4826 8.00044 12.4826ZM12.2895 5.03553C11.7571 5.03553 11.3272 4.60562 11.3272 4.07325C11.3272 3.54089 11.7571 3.11098 12.2895 3.11098C12.8219 3.11098 13.2518 3.54089 13.2518 4.07325C13.2519 4.19967 13.2272 4.32487 13.1789 4.44169C13.1306 4.55851 13.0597 4.66465 12.9703 4.75404C12.8809 4.84343 12.7748 4.9143 12.6579 4.9626C12.5411 5.01091 12.4159 5.03569 12.2895 5.03553Z" fill="currentColor" />
-							</g>
-							<defs>
-								<clipPath id="clip23">
-									<rect width="16" height="16" fill="white" transform="translate(0 0.361328)" />
-								</clipPath>
-							</defs>
-						</svg></a> <a id="facebookbtn" href="https://web.facebook.com/kippa.africa" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.9215 0.361328C1.30312 0.361328 0 1.66445 0 3.28283V13.4398C0 15.0582 1.30312 16.3613 2.9215 16.3613H8.42651V10.1063H6.77251V7.85434H8.42651V5.93034C8.42651 4.41874 9.40378 3.03083 11.655 3.03083C12.5665 3.03083 13.2405 3.11834 13.2405 3.11834L13.1875 5.22134C13.1875 5.22134 12.5001 5.21485 11.75 5.21485C10.9382 5.21485 10.808 5.5889 10.808 6.20986V7.85435H13.252L13.1455 10.1064H10.808V16.3614H13.0785C14.6969 16.3614 16 15.0582 16 13.4399V3.28285C16 1.66446 14.6969 0.361344 13.0785 0.361344H2.92149L2.9215 0.361328Z" fill="currentColor" />
-						</svg></a>
+		<div class=" my-5 md:my-10">
+			<footer class="container md:container lg:container mx-auto p-4 sm:p-6">
+				<div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+					<div>
+						<img src="/favicon.svg" width="72" height="24" alt="Logo">
+						<div class="my-3 flex mt-4 space-x-6 sm:justify-start sm:mt-0">
+							<a id="linkedinbtn" href="https://www.linkedin.com/company/kippaafrica" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip3)">
+									<path d="M3.13696 0.365234C1.41349 0.365234 0.00292969 1.77576 0.00292969 3.49927V13.2247C0.00292969 14.9482 1.41346 16.3582 3.13696 16.3582H12.8624C14.5859 16.3582 15.9959 14.9482 15.9959 13.2247V3.49927C15.9959 1.77579 14.5859 0.365234 12.8624 0.365234H3.13696ZM3.92522 3.0044C4.75159 3.0044 5.26059 3.5469 5.27631 4.26C5.27631 4.95736 4.75155 5.51511 3.90923 5.51511H3.89373C3.08309 5.51511 2.55914 4.95739 2.55914 4.26C2.55914 3.54691 3.09895 3.0044 3.9252 3.0044H3.92522ZM11.0465 6.33736C12.6358 6.33736 13.8271 7.37611 13.8271 9.60834V13.7755H11.4119V9.88773C11.4119 8.91077 11.0623 8.24424 10.1883 8.24424C9.52101 8.24424 9.12328 8.69349 8.94866 9.12747C8.88487 9.28274 8.86919 9.49959 8.86919 9.71679V13.7755H6.45394C6.45394 13.7755 6.48563 7.18971 6.45394 6.50779H8.86968V7.53698C9.19064 7.04178 9.76475 6.33735 11.0465 6.33735V6.33736ZM2.7016 6.50832H5.11685V13.7756H2.7016V6.50832Z" fill="currentColor" />
+								</g>
+								<defs>
+									<clipPath id="clip3">
+										<rect width="16" height="16" fill="white" transform="translate(0 0.361328)" />
+									</clipPath>
+								</defs>
+							</svg></a> <a id="twitterbtn" href="https://twitter.com/kippa_africa?s=21" target="_blank" class="mr-2"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip11)">
+									<path d="M15.999 2.40282C15.5535 3.06555 15.0069 3.6305 14.3592 4.09767C14.3656 4.22296 14.3688 4.36457 14.3688 4.5225C14.3688 5.4 14.2408 6.27856 13.985 7.15818C13.7291 8.03781 13.3382 8.87977 12.8124 9.68406C12.2866 10.4884 11.6603 11.2009 10.9334 11.8217C10.2065 12.4424 9.33279 12.9374 8.31219 13.3066C7.2916 13.6757 6.19779 13.8603 5.03078 13.8603C3.20947 13.8603 1.53221 13.3686 -0.000976562 12.3852C0.271146 12.4155 0.532135 12.4307 0.78199 12.4307C2.30355 12.4307 3.66255 11.962 4.85899 11.0247C4.14955 11.0117 3.51419 10.7933 2.95292 10.3695C2.39165 9.94576 2.0054 9.40427 1.79416 8.74505C2.00295 8.78482 2.20902 8.80471 2.41238 8.80471C2.70509 8.80471 2.99311 8.76653 3.27644 8.69018C2.51934 8.53855 1.89126 8.16146 1.3922 7.55892C0.893158 6.95639 0.643637 6.26094 0.643637 5.4726V5.43197C1.10835 5.68928 1.60404 5.82614 2.1307 5.84257C1.6822 5.54357 1.32661 5.15366 1.06392 4.67285C0.801217 4.19204 0.669865 3.67172 0.669865 3.11188C0.669865 2.52145 0.817819 1.97164 1.11373 1.46246C1.93706 2.47282 2.9347 3.28033 4.10666 3.885C5.27862 4.48967 6.53592 4.82549 7.87855 4.89245C7.82128 4.6538 7.7926 4.40475 7.79249 4.14532C7.79249 3.23946 8.11306 2.46599 8.7542 1.8249C9.39534 1.18382 10.1688 0.863281 11.0747 0.863281C12.0231 0.863281 12.8219 1.20862 13.4712 1.89929C14.2131 1.75234 14.9077 1.48656 15.5551 1.10193C15.3057 1.88687 14.8251 2.49239 14.1133 2.9185C14.7675 2.84076 15.3961 2.66887 15.999 2.40282H15.999Z" fill="currentColor" />
+								</g>
+								<defs>
+									<clipPath id="clip11">
+										<rect width="16" height="12.997" fill="white" transform="translate(0 0.863281)" />
+									</clipPath>
+								</defs>
+							</svg></a> <a id="instabtn" href="https://www.instagram.com/kippaafrica/" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip23)">
+									<path d="M8.00044 5.68441C6.52589 5.68441 5.32254 6.88776 5.32254 8.36232C5.32254 9.83687 6.52589 11.0402 8.00044 11.0402C9.475 11.0402 10.6783 9.83687 10.6783 8.36232C10.6783 6.88776 9.475 5.68441 8.00044 5.68441ZM16.0321 8.36232C16.0321 7.25339 16.0422 6.1545 15.9799 5.04758C15.9176 3.76187 15.6243 2.6208 14.6841 1.68062C13.742 0.738432 12.6029 0.447138 11.3172 0.384861C10.2083 0.322584 9.10937 0.332629 8.00245 0.332629C6.89352 0.332629 5.79464 0.322584 4.68772 0.384861C3.40201 0.447138 2.26094 0.740441 1.32076 1.68062C0.378569 2.62281 0.0872744 3.76187 0.0249976 5.04758C-0.0372792 6.15651 -0.0272345 7.2554 -0.0272345 8.36232C-0.0272345 9.46924 -0.0372792 10.5701 0.0249976 11.677C0.0872744 12.9628 0.380578 14.1038 1.32076 15.044C2.26294 15.9862 3.40201 16.2775 4.68772 16.3398C5.79665 16.402 6.89553 16.392 8.00245 16.392C9.11138 16.392 10.2103 16.402 11.3172 16.3398C12.6029 16.2775 13.744 15.9842 14.6841 15.044C15.6263 14.1018 15.9176 12.9628 15.9799 11.677C16.0442 10.5701 16.0321 9.47124 16.0321 8.36232ZM8.00044 12.4826C5.72031 12.4826 3.88013 10.6425 3.88013 8.36232C3.88013 6.08218 5.72031 4.242 8.00044 4.242C10.2806 4.242 12.1208 6.08218 12.1208 8.36232C12.1208 10.6425 10.2806 12.4826 8.00044 12.4826ZM12.2895 5.03553C11.7571 5.03553 11.3272 4.60562 11.3272 4.07325C11.3272 3.54089 11.7571 3.11098 12.2895 3.11098C12.8219 3.11098 13.2518 3.54089 13.2518 4.07325C13.2519 4.19967 13.2272 4.32487 13.1789 4.44169C13.1306 4.55851 13.0597 4.66465 12.9703 4.75404C12.8809 4.84343 12.7748 4.9143 12.6579 4.9626C12.5411 5.01091 12.4159 5.03569 12.2895 5.03553Z" fill="currentColor" />
+								</g>
+								<defs>
+									<clipPath id="clip23">
+										<rect width="16" height="16" fill="white" transform="translate(0 0.361328)" />
+									</clipPath>
+								</defs>
+							</svg></a> <a id="facebookbtn" href="https://web.facebook.com/kippa.africa" target="_blank" class="mr-2"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.9215 0.361328C1.30312 0.361328 0 1.66445 0 3.28283V13.4398C0 15.0582 1.30312 16.3613 2.9215 16.3613H8.42651V10.1063H6.77251V7.85434H8.42651V5.93034C8.42651 4.41874 9.40378 3.03083 11.655 3.03083C12.5665 3.03083 13.2405 3.11834 13.2405 3.11834L13.1875 5.22134C13.1875 5.22134 12.5001 5.21485 11.75 5.21485C10.9382 5.21485 10.808 5.5889 10.808 6.20986V7.85435H13.252L13.1455 10.1064H10.808V16.3614H13.0785C14.6969 16.3614 16 15.0582 16 13.4399V3.28285C16 1.66446 14.6969 0.361344 13.0785 0.361344H2.92149L2.9215 0.361328Z" fill="currentColor" />
+							</svg></a>
+						</div>
+						<div class="app-download-btns my-3 flex flex-wrap">
+							<a id="playstorebtn2" target="_blank" href="https://kippa.africa/download"><img
+								format="webp"
+								quality="75"
+								width="600"
+								height="400"
+								loading="lazy"
+								src="/svgs/google-play.svg"
+								alt="Google play download icon"
+								title="Google play download icon"
+								class="mr-3 mb-4 cursor-pointer h-10 w-auto"
+							></a> <a id="appstorebtn2" target="_blank" href="https://kippa.africa/download"><img
+								format="webp"
+								quality="75"
+								width="600"
+								height="400"
+								loading="lazy"
+								src="/svgs/app-store.svg"
+								alt="App store download icon"
+								title="App store download icon"
+								class="mr-3 mb-4 cursor-pointer h-10 w-auto"
+							></a>
+						</div>
 					</div>
-					<div class="app-download-btns my-3 flex flex-wrap">
-						<a id="playstorebtn2" target="_blank" href="https://kippa.africa/download"><img
-							format="webp"
-							quality="75"
-							width="600"
-							height="400"
-							loading="lazy"
-							src="/svgs/google-play.svg"
-							alt="Google play download icon"
-							title="Google play download icon"
-							class="mr-3 mb-4 cursor-pointer h-10 w-auto"
-						></a> <a id="appstorebtn2" target="_blank" href="https://kippa.africa/download"><img
-							format="webp"
-							quality="75"
-							width="600"
-							height="400"
-							loading="lazy"
-							src="/svgs/app-store.svg"
-							alt="App store download icon"
-							title="App store download icon"
-							class="mr-3 mb-4 cursor-pointer h-10 w-auto"
-						></a>
+					<div>
+						<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
+							Company
+						</h3>
+						<ul>
+							<li class="mb-4">
+								<a href="https://kippa.africa/careers" class="text-gray-600 hover:underline">
+									Career
+								</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://kippa.africa/faqs" class="text-gray-600 hover:underline">
+									FAQ
+								</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://kippa.africa/terms-of-service" class="text-gray-600 hover:underline">
+									Terms of Service
+								</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://kippa.africa/privacy-policy" target="_blank" class="text-gray-600 hover:underline">
+									Privacy Policy
+								</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://year.kippa.africa/" target="_blank" class="text-gray-600 hover:underline">
+									Year in Review
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
+							Contact
+						</h3>
+						<ul>
+							<li class="mb-4">
+								<a href="mailTo:support@kippa.africa" class="text-gray-600 hover:underline">
+									info@kippa.africa
+								</a>
+							</li>
+							<li class="mb-4">
+								<a href="tel:+2348173217999" class="text-gray-600 hover:underline">
+									+2348173217999
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
+							nigeria
+						</h3>
+						<ul>
+							<li class="mb-4">
+								<a href="#" class="text-gray-600 hover:underline">
+									14 Williams Onoh Drive, <br>
+									ChevyView Estate, <br>
+									Chevron Drive, Lekki, <br>
+									Lagos.
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
+							united states
+						</h3>
+						<ul>
+							<li class="mb-4">
+								<a href="#" class="text-gray-600 hover:underline">
+									251 Little Falls Drive, <br>
+									Wilmington, DE
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div>
-					<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
-						Company
-					</h3>
-					<ul>
-						<li class="mb-4">
-							<a href="https://kippa.africa/careers" class="text-gray-600 hover:underline">
-								Career
-							</a>
-						</li>
-						<li class="mb-4">
-							<a href="https://kippa.africa/faqs" class="text-gray-600 hover:underline">
-								FAQ
-							</a>
-						</li>
-						<li class="mb-4">
-							<a href="https://kippa.africa/terms-of-service" class="text-gray-600 hover:underline">
-								Terms of Service
-							</a>
-						</li>
-						<li class="mb-4">
-							<a href="https://kippa.africa/privacy-policy" target="_blank" class="text-gray-600 hover:underline">
-								Privacy Policy
-							</a>
-						</li>
-						<li class="mb-4">
-							<a href="https://year.kippa.africa/" target="_blank" class="text-gray-600 hover:underline">
-								Year in Review
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
-						Contact
-					</h3>
-					<ul>
-						<li class="mb-4">
-							<a href="mailTo:support@kippa.africa" class="text-gray-600 hover:underline">
-								info@kippa.africa
-							</a>
-						</li>
-						<li class="mb-4">
-							<a href="tel:+2348173217999" class="text-gray-600 hover:underline">
-								+2348173217999
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
-						nigeria
-					</h3>
-					<ul>
-						<li class="mb-4">
-							<a href="#" class="text-gray-600 hover:underline">
-								14 Williams Onoh Drive, <br>
-								ChevyView Estate, <br>
-								Chevron Drive, Lekki, <br>
-								Lagos.
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="mb-6 text-sm font-semibold text-slate-500 uppercase">
-						united states
-					</h3>
-					<ul>
-						<li class="mb-4">
-							<a href="#" class="text-gray-600 hover:underline">
-								251 Little Falls Drive, <br>
-								Wilmington, DE
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8">
-			<div class="sm:flex sm:items-center sm:justify-between items-center">
-				<span class="text-sm text-gray-500 sm:text-center my-3">
-					©2021. All Rights Reserved.
-				</span>
-				<div class="my-3">
-					<button type="button" class="text-primary drop-shadow-md bg-white hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-5 text-center mr-2 mb-2 uppercase flex justify-between">
-						<svg
-							width="14"
-							height="13"
-							viewBox="0 0 14 13"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							class="mr-2"
-						>
-							<path d="M7 13V1" stroke="#5047F5" stroke-width="2" stroke-linejoin="round" />
-							<path d="M1 7L7 1L13 7" stroke="#5047F5" stroke-width="2" stroke-linejoin="round" />
-						</svg>
+				<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8">
+				<div class="sm:flex sm:items-center sm:justify-between items-center">
+					<span class="text-sm text-gray-500 sm:text-center my-3">
+						©2021. All Rights Reserved.
+					</span>
+					<div class="my-3">
+						<button type="button" class="text-primary drop-shadow-md bg-white hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-5 text-center mr-2 mb-2 uppercase flex justify-between">
+							<svg
+								width="14"
+								height="13"
+								viewBox="0 0 14 13"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="mr-2"
+							>
+								<path d="M7 13V1" stroke="#5047F5" stroke-width="2" stroke-linejoin="round" />
+								<path d="M1 7L7 1L13 7" stroke="#5047F5" stroke-width="2" stroke-linejoin="round" />
+							</svg>
 
-						back to top
-					</button>
+							back to top
+						</button>
+					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
 	</div>
 </template>
 
 <script setup>
+import FaqAccordion from '../../components/landingpage/FaqAccordion.vue'
 import Stepper from '../../components/landingpage/Stepper.vue'
 import Hero from '../../components/landingpage/Hero.vue'
 import NavBar from '../../components/landingpage/navBar.vue'
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
