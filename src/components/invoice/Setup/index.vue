@@ -2,9 +2,9 @@
 <template>
 	<section class="flex flex-col sub_section">
 		<Stepper />
-		<p class="mt-12">
-			section 1
-		</p>
+		<section class="mt-12">
+			<InvoiceSetupSectionOne />
+		</section>
 	</section>
 </template>
 

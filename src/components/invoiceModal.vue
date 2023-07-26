@@ -46,7 +46,7 @@
 							<input
 								v-model="billFrom"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="input"
 							>
 						</div>
 						<div>
@@ -54,7 +54,7 @@
 							<input
 								v-model="billTo"
 								type="text"
-								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="input"
 							>
 						</div>
 					</div>
@@ -62,22 +62,14 @@
 					<div class="grid grid-cols-1 gap-4 pt-2">
 						<div>
 							<label class="block mb-2 text-left font-bold">Recipient Email</label>
-							<input
-								v-model="email"
-								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
-							>
+							<input v-model="email" type="text" class="input">
 						</div>
 					</div>
 
 					<div class="grid grid-cols-1 gap-4 pt-2">
 						<div>
 							<label class="block mb-2 text-left font-bold">Bill Title/Project Descriptions</label>
-							<input
-								v-model="title"
-								type="text"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
-							>
+							<input v-model="title" type="text" class="input">
 						</div>
 					</div>
 
@@ -87,7 +79,7 @@
 							<input
 								v-model="issuedOn"
 								type="date"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="input"
 							>
 						</div>
 						<div>
@@ -95,7 +87,7 @@
 							<input
 								v-model="dueOn"
 								type="date"
-								class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
+								class="w-full text-gray-500 px-4 py-2 text-xl  bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition"
 							>
 						</div>
 
@@ -119,7 +111,7 @@
 								v-model="projectName"
 								type="text"
 								placeholder="Project Name"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+								class="w-full text-gray-500 px-4 py-2  bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 							>
 						</div>
 					</div>
@@ -164,7 +156,7 @@
 												v-model="item.name"
 												type="text"
 												placeholder="Company Name"
-												class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2  bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Price input -->
@@ -173,7 +165,7 @@
 												v-model="item.price"
 												type="text"
 												placeholder="$500"
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl  bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Qty input -->
@@ -182,7 +174,7 @@
 												v-model="item.qty"
 												type="text"
 												placeholder="1"
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl  bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Total Price input -->
@@ -191,7 +183,7 @@
 												type="text"
 												:value="item.qty * item.price"
 												readonly
-												class="w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50bg-blue-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+												class="w-full text-gray-500 px-4 py-2 text-xl  bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 											>
 										</td>
 										<!-- Delete icon -->
@@ -289,7 +281,7 @@
 							<textarea
 								placeholder="Write your notes here..."
 								rows="4"
-								class="w-full text-gray-500 px-4 py-2 bg-blue-50 bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
+								class="w-full text-gray-500 px-4 py-2  bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-500 transition"
 							/>
 						</div>
 					</div>
@@ -330,6 +322,16 @@ const dueOn = ref('')
 const issuedOn = ref('')
 const projectName = ref('')
 
+const formDate = {
+	  billFrom: ref(''),
+  billTo: ref(''),
+  email: ref(''),
+  title: ref(''),
+  dueOn,
+  issuedOn,
+  projectName
+}
+
 function deleteItem(index) {
   items.value.splice(index, 1)
 }
@@ -365,6 +367,9 @@ const totalAmount = computed(() => {
 </script>
 
 <style scoped>
+.input{
+	@apply w-full text-gray-500 px-4 py-2  bg-opacity-50 text-xl  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-white transition
+}
 .container {
   height: 450px; /* Set the maximum height of the container div */
   overflow-y: scroll; /* Enable vertical scrolling within the container div */

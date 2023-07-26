@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="relative">
 		<slot />
 	</section>
 </template>

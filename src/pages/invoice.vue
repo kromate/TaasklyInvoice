@@ -3,7 +3,7 @@
 		<invoiceModal v-if="showModal" @close="handleModalClose" />
 
 		<div class="flex justify-center items-center min-h-screen">
-			<button type="pry" class="text-white bg-primary py-4 px-4  rounded border border-gray-200 text-sm font-medium " @click="openModal">
+			<button type="pry" class="btn " @click="openModal">
 				Open Modal
 			</button>
 		</div>
@@ -12,7 +12,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import VButton from '../components/v-button.vue'
+// import VButton from '../components/v-button.vue'
 import invoiceModal from '../components/invoiceModal.vue'
 
 const showModal = ref(false)
@@ -26,4 +26,8 @@ function handleModalClose() {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn{
+	@apply text-white bg-primary py-4 px-4  rounded border border-gray-200 text-sm font-medium
+}
+</style>

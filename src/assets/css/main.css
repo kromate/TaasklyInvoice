@@ -8,37 +8,3 @@
 
 
 
-@layer components {
-    .field {
-        @apply flex flex-col w-full items-start;
-    }
-    label,
-    .label {
-        @apply font-medium text-sm text-[#61656E] mb-2 flex gap-2 items-center;
-    }
-    .input-field {
-        @apply w-full !bg-[#F0F0F0] px-4 py-[12px] outline-none text-[#4F5564] rounded-lg relative !text-start;
-    }
-    .input-field:focus {
-        @apply border-2 border-primary transite;
-    }
-    .transite {
-        transition: all 0.15s ease-in;
-    }
-    input {
-        @apply text-white px-6;
-    }
-    .btn-primary {
-        @apply text-white hover:bg-[#6283FA] transite font-bold lg:text-lg text-base flex items-center gap-2 bg-primary px-7 py-3.5 rounded-[10px];
-    }
-
-    button:disabled{
-        @apply bg-[#2C303D] text-[#A0A0A0] cursor-not-allowed hover:bg-[#2C303D];
-    }
- select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-}
-}
