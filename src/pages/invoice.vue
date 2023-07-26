@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<invoiceModal v-if="showModal" @close="handleModalClose" />
 
@@ -13,13 +14,16 @@
 <script setup>
 import { ref } from 'vue'
 // import VButton from '../components/v-button.vue'
+=======
+	<main class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 h-screen">
+		<InvoiceSetup />
+		<invoiceModal @close="handleModalClose" />
+	</main>
+</template>
+
+<script setup>
+>>>>>>> 0d98ca9ef7c613150bdec503d959273c37126bc9
 import invoiceModal from '../components/invoiceModal.vue'
-
-const showModal = ref(false)
-
-function openModal() {
-  showModal.value = true
-}
 
 function handleModalClose() {
   showModal.value = false
