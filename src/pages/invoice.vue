@@ -14,7 +14,5 @@ function handleModalClose() {
 </script>
 
 <style scoped>
-.btn{
-	@apply text-white bg-primary py-4 px-4  rounded border border-gray-200 text-sm font-medium
-}
+
 </style>

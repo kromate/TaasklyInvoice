@@ -30,5 +30,12 @@
         .center {
         @apply flex justify-center items-center;
     }
-
+    .input{
+        @apply w-full text-gray-500 px-4 py-2 text-xl bg-gray-100 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-[#4f1ded] focus:border-[#4f1ded] placeholder-gray-300 transition;
+      }
+      
+      .table{
+          @apply block mb-2 text-left col-span-2 font-bold whitespace-nowrap
+      }
+      
 }
