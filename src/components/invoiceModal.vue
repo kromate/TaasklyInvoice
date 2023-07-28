@@ -32,36 +32,36 @@
 					</h1>
 					<div class="grid lg:grid-cols-2 gap-4">
 						<div>
-							<label class="block mb-2 text-left font-bold">Bill From</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Bill From</label>
 							<input v-model="billFrom" type="text" class="input">
 						</div>
 						<div>
-							<label class="block mb-2 text-left font-bold">Bill To</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Bill To</label>
 							<input v-model="billTo" type="text" class="input">
 						</div>
 					</div>
 
 					<div class="grid grid-cols-1 gap-4 pt-2">
 						<div>
-							<label class="block mb-2 text-left font-bold">Recipient Email</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Recipient Email</label>
 							<input v-model="email" type="text" class="input">
 						</div>
 					</div>
 
 					<div class="grid grid-cols-1 gap-4 pt-2">
 						<div>
-							<label class="block mb-2 text-left font-bold">Bill Title/Project Descriptions</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Bill Title/Project Descriptions</label>
 							<input v-model="title" type="text" class="input">
 						</div>
 					</div>
 
 					<div class="grid lg:grid-cols-2 gap-4 pt-2">
 						<div>
-							<label class="block mb-2 text-left font-bold">Issued On</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Issued On</label>
 							<input v-model="issuedOn" type="date" class="input">
 						</div>
 						<div>
-							<label class="block mb-2 text-left font-bold">Due On</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Due On</label>
 							<input v-model="dueOn" type="date" class="input">
 						</div>
 
@@ -80,7 +80,7 @@
 					</h1>
 					<div class="grid grid-cols-1 gap-4">
 						<div>
-							<label class="block mb-2 text-left font-bold">Currency</label>
+							<label class="block mb-2 text-left font-bold text-gray-500">Currency</label>
 							<input
 								v-model="projectName"
 								type="text"
@@ -203,7 +203,7 @@
 
 					<div class="flex justify-center lg:justify-end m-4 pb-10">
 						<button
-							class="text-white bg-primary py-2 px-8 rounded-lg border border-gray-200 text-lg font-medium"
+							class="text-white bg-[#4f1ded] py-2 px-8 rounded-lg border border-gray-200 text-lg font-medium"
 						>
 							Create Invoice
 						</button>
@@ -239,9 +239,9 @@ const formDate = {
   billTo: ref(''),
   email: ref(''),
   title: ref(''),
-  dueOn,
-  issuedOn,
-  projectName
+  dueOn: ref(''),
+  issuedOn: ref(''),
+  projectName: ref('')
 }
 
 function deleteItem(index) {
@@ -279,13 +279,14 @@ const totalAmount = computed(() => {
 </script>
 
 <style scoped>
-.input {
-  @apply w-full text-gray-500 px-4 py-2 text-xl bg-blue-50 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-300 transition;
+
+	/* .input{
+  @apply w-full text-gray-500 px-4 py-2 text-xl bg-blue-100 bg-opacity-50  rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-300 transition;
 }
 
 .table{
 	@apply block mb-2 text-left col-span-2 font-bold whitespace-nowrap
-}
+} */
 .container {
   height: 450px; /* Set the maximum height of the container div */
   overflow-y: scroll; /* Enable vertical scrolling within the container div */

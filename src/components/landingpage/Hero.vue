@@ -56,7 +56,7 @@
 										</label>
 									</div>
 									<div class="basis-1/2 md:col-span-2">
-										<button id="getstarted" type="submit" class="basis-1/2 text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-r-lg text-lg px-6 py-3.5 text-center">
+										<button id="getstarted" type="submit" class="basis-1/2 text-white bg-[#4f1ded] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-r-lg text-lg px-6 py-3.5 text-center">
 											Get Started
 										</button>
 									</div>

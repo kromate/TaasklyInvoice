@@ -1,6 +1,9 @@
 <template>
 	<div class="bg-[#F3EFFE] py-10 faq-container">
 		<!-- ... existing code ... -->
+		<h1 class="text-[2.2rem] md:text-[3rem] lg:text-[3.2rem] leading-[140%] font-[500] text-[#0F172A] text-center my-5">
+			Frequently Asked Questions
+		</h1>
 		<div class="mt-10 py-10 max-w-2xl mx-auto">
 			<div
 				v-for="(faq, index) in faqs"
@@ -29,7 +32,7 @@
 						/>
 					</svg>
 				</div>
-				<label :for="`tab-single-${index}`" class="block text-xl cursor-pointer">
+				<label :for="`tab-single-${index}`" class=" text-black block text-xl cursor-pointer">
 					{{ faq.question }}
 				</label>
 				<div v-if="activeTab === index" class="tab-content overflow-hidden leading-normal">

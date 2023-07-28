@@ -98,7 +98,7 @@
 			</div>
 		</div>
 		<div class="mt-10 mx-1 md:mx-6">
-			<a href="/create-invoice" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-3.5 text-center">
+			<a href="/create-invoice" class="text-white bg-[#4f1ded] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-3.5 text-center">
 				Create your Invoice
 			</a>
 		</div>
@@ -106,7 +106,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>
