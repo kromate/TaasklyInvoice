@@ -4,6 +4,8 @@
 		<section class="mt-12">
 			<transition name="slideRight" appear>
 				<InvoiceSetupSectionOne v-if="step ===1" />
+				<InvoiceSetupSectionTwo v-else-if="step ===2" />
+				<InvoiceSetupSectionThree v-else-if="step ===3" />
 			</transition>
 		</section>
 	</section>
