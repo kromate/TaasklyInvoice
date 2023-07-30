@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-*{
-    user-select: none;
-    font-family: 'Nunito', sans-serif;
-}
+
 body{
     background-color: var(--light);
+      font-family: 'Nunito', sans-serif;
 }
 
 .bg {
