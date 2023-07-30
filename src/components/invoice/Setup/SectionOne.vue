@@ -7,7 +7,7 @@
 				Reset
 			</button>
 		</h4>
-		<div class="grid grid-cols-2 gap-4 my-4">
+		<div class="form-flex">
 			<div class="field">
 				<label for="bg">Background Color</label>
 				<input
@@ -37,7 +37,7 @@
 				Reset
 			</button>
 		</h4>
-		<div class="grid grid-cols-2 gap-4 my-4">
+		<div class="form-flex">
 			<div class="field">
 				<label for="logo">Select Logo</label>
 				<label for="logo" class="input-field center cursor-pointer justify-start">{{ formCustomisationData.logo.logoName.value }}</label>

@@ -2,54 +2,25 @@
 <template>
 	<form class="flex flex-col" @submit="step++">
 		<h4 class="form-title">
-			<span>Form colors</span>
-			<button class="text-dark text-sm" type="button" @click="resetColors">
-				Reset
-			</button>
+			<span>Bill From</span>
 		</h4>
-		<div class="grid grid-cols-2 gap-4 my-4">
+		<div class="form-flex">
 			<div class="field">
-				<label for="bg">Background Color</label>
+				<label for="bg">Name</label>
 				<input
 					id="bg"
-					v-model="formCustomisationData.background_color.value"
-					placeholder="Select background color"
-					type="color"
+					placeholder="Enter name"
+					type="text"
 					class="input-field"
 					required
 				>
 			</div>
 			<div class="field">
-				<label for="tx">Text Color</label>
+				<label for="tx">Address</label>
 				<input
 					id="tx"
-					v-model="formCustomisationData.text_color.value"
-					placeholder="Select text color"
-					type="color"
-					class="input-field"
-					required
-				>
-			</div>
-		</div>
-		<h4 class="form-title">
-			<span>Form Logo</span>
-			<button class="text-dark text-sm" type="button" @click="resetLogo">
-				Reset
-			</button>
-		</h4>
-		<div class="grid grid-cols-2 gap-4 my-4">
-			<div class="field">
-				<label for="logo">Select Logo</label>
-				<label for="logo" class="input-field center cursor-pointer justify-start">{{ formCustomisationData.logo.logoName.value }}</label>
-				<input id="logo" type="file" class="hidden" @change="updateLogo($event)">
-			</div>
-			<div class="field">
-				<label for="lw">Width</label>
-				<input
-					id="lw"
-					v-model="formCustomisationData.logo.width.value"
-					placeholder="Select text color"
-					type="number"
+					placeholder="Location / Email / Phone"
+					type="text"
 					class="input-field"
 					required
 				>
@@ -57,16 +28,38 @@
 		</div>
 
 		<h4 class="form-title">
-			<span>Form Font</span>
-			<button class="text-dark text-sm" type="button" @click="resetFont">
-				<Spinner v-if="loadingFontLink" size="20px" />
-				<span v-else>Reset</span>
-			</button>
+			<span>Bill To</span>
 		</h4>
-		<div class="grid grid-cols-1 gap-4 my-4">
+		<div class="form-flex">
+			<div class="field">
+				<label for="bg">Name</label>
+				<input
+					id="bg"
+					placeholder="Enter name"
+					type="text"
+					class="input-field"
+					required
+				>
+			</div>
+			<div class="field">
+				<label for="tx">Address</label>
+				<input
+					id="tx"
+					placeholder="Location / Email / Phone"
+					type="text"
+					class="input-field"
+					required
+				>
+			</div>
+		</div>
+
+		<h4 class="form-title">
+			<span>Dates</span>
+		</h4>
+		<div class="form-flex">
 			<div class="field">
 				<label for="logo">Select Logo</label>
-				<SuggestionInput v-model="formCustomisationData.font_family.value" :options="fonts" :loading="loading || loadingFontLink" placeholder="Select Font" />
+				<DateInput />
 			</div>
 		</div>
 		<button class="modal-btn mt-12" type="submit">

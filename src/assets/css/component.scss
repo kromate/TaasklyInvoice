@@ -65,5 +65,8 @@
     .btn-secondary {
         @apply btn bg-light text-primary border-2 border-primary;
     }
+    .form-flex{
+        @apply grid grid-cols-2 gap-4 my-4
+    }
       
 }
