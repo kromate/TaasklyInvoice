@@ -1,26 +1,28 @@
 <template>
-	<date-picker
-		:value="dateInput"
-		:format="format"
-		:type="type"
-		:placeholder="placeholder"
-		:range="range"
-		:disabled-date="disabledDate"
-		class="w-full"
-		:value-type="valueType"
-		:disabled="disabled"
-		:editable="editable"
-		:clearable="clearable"
-		:time-picker-options="timePickerOptions"
-		:show-time-panel="showTimePanel"
-		@update:value="handleDate"
-	>
-		<template #header="{ emit }">
-			<button class="mx-btn mx-btn-text" @click="emit(new Date())">
-				Today
-			</button>
-		</template>
-	</date-picker>
+	<client-only>
+		<date-picker
+			:value="dateInput"
+			:format="format"
+			:type="type"
+			:placeholder="placeholder"
+			:range="range"
+			:disabled-date="disabledDate"
+			class="w-full"
+			:value-type="valueType"
+			:disabled="disabled"
+			:editable="editable"
+			:clearable="clearable"
+			:time-picker-options="timePickerOptions"
+			:show-time-panel="showTimePanel"
+			@update:value="handleDate"
+		>
+			<template #header="{ emit }">
+				<button class="mx-btn mx-btn-text" @click="emit(new Date())">
+					Today
+				</button>
+			</template>
+		</date-picker>
+	</client-only>
 </template>
 
 <script setup lang="ts">
