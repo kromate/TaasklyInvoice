@@ -148,7 +148,7 @@
 
 .mx-input {
 
-   @apply input-field;
+   @apply border border-gray-400 w-full bg-light text-dark h-11 px-4 rounded-md outline-none hover:border-2 focus:border focus:border-primary transition-all duration-200 ease-in;;
 }
 
 .mx-input:hover,

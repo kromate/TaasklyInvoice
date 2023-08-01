@@ -1,5 +1,5 @@
 <template>
-	<section class="flex flex-col sub_section text-dark output">
+	<section class="md:flex flex-col sub_section text-dark output hidden">
 		<template_1 />
 	</section>
 </template>

@@ -1,5 +1,5 @@
 <template>
-	<main class="grid grid-cols-2 gap-4 p-4 h-screen">
+	<main class="grid md:grid-cols-2 gap-4 p-4 h-screen">
 		<InvoiceSetup />
 		<InvoiceOutput />
 	</main>
