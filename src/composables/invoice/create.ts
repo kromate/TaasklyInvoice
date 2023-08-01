@@ -45,7 +45,6 @@ const formListData = useStorage('form_list',
 export const useCreateInvoice = () => {
     const addNewItem = () => {
         const id = formListData.value[formListData.value.length - 1].id + 1
-        console.log(id)
         formListData.value.push({ id, item: '', quantity: 0, price: 0 })
     }
     const subTotal = () => {
