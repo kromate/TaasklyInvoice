@@ -1,6 +1,12 @@
 <template>
 	<section class="flex flex-col sub_section">
-		<Stepper />
+		<header class="flex justify-between">
+			<Stepper />
+			<button class="btn-primary md:hidden">
+				Preview
+			</button>
+		</header>
+
 		<section class="mt-12 relative">
 			<transition name="slideRight" appear>
 				<InvoiceSetupSectionOne v-if="step ===1" />
