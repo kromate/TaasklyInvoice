@@ -4,11 +4,12 @@ import html2canvas from 'html2canvas'
 // @ts-expect-error
 import defaultLogo from '@/assets/images/logo.svg'
 import { formatDate } from '@/composables/utils'
+import { exportToPDF } from '#imports'
 
 const formCustomisationData = {
     background_color: useStorage('background_color', '#ffffff'),
     text_color: useStorage('text_color', '#000000'),
-    font_family: useStorage('font_family', 'Nunito'),
+    font_family: useStorage('font_family', 'Space Grotesk'),
     logo: {
         url: useStorage('logo_url', defaultLogo),
         width: useStorage('logo_width', 25),
@@ -63,12 +64,15 @@ export const useCreateInvoice = () => {
         formCustomisationData.logo.width.value = 25
     }
     const resetFont = () => {
-        formCustomisationData.font_family.value = 'Nunito'
+        formCustomisationData.font_family.value = 'Space Grotesk'
     }
     const DownloadOutput = async () => {
         const pdfSection = document.querySelector('#output')
+        console.log(pdfSection)
         const canvas = await html2canvas(pdfSection as HTMLElement)
         DownloadCanvasAsImage(canvas, 'invoice')
+
+        // exportToPDF('invoice', pdfSection as HTMLElement)
     }
     return {
         formCustomisationData, formInfoData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, DownloadOutput

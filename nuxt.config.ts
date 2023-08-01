@@ -29,13 +29,15 @@ export default {
 	alias: {
 		'@': './src'
 	},
-
+	gtag: {
+		id: 'G-J8SETHT531'
+	},
 	css: ['/src/assets/css/main.css'],
 	components: [
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
 	],
-	modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-pdf'],
+	modules: ['@nuxtjs/tailwindcss', 'nuxt-gtag', '@sidebase/nuxt-pdf'],
 
 	build: {
 		postcss: {

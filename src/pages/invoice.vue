@@ -1,16 +1,12 @@
 <template>
-	<main class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 h-screen">
+	<main class="grid grid-cols-2 gap-4 p-4 h-screen">
 		<InvoiceSetup />
-		<invoiceModal @close="handleModalClose" />
+		<InvoiceOutput />
 	</main>
 </template>
 
-<script setup>
-import invoiceModal from '../components/invoiceModal.vue'
+<script setup lang="ts">
 
-function handleModalClose() {
-  showModal.value = false
-}
 </script>
 
 <style scoped>

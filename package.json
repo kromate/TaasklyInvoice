@@ -46,6 +46,8 @@
 		"@vueuse/core": "^9.13.0",
 		"axios": "^1.4.0",
 		"html2canvas": "^1.4.1",
+		"nuxt-clarity-analytics": "^0.0.2",
+		"nuxt-gtag": "^0.5.7",
 		"postcss-custom-properties": "^12.1.11",
 		"vue-datepicker-next": "^1.0.3"
 	}
