@@ -1,6 +1,6 @@
 
 <template>
-	<form class="flex flex-col" @submit="step++">
+	<form class="flex flex-col" @submit.prevent="step++">
 		<h4 class="form-title">
 			<span>Form colors</span>
 			<button class="text-dark text-sm" type="button" @click="resetColors">

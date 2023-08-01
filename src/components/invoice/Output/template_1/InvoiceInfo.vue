@@ -5,10 +5,10 @@
 				Bill From:
 			</p>
 			<p class="text-lg font-semibold">
-				Reza Raharjo
+				{{ formInfoData.from.name.value }}
 			</p>
 			<p class="text-sm">
-				4517 Washington Ave. Manchester, Kentucky 39495
+				{{ formInfoData.from.address.value }}
 			</p>
 		</div>
 		<div class="flex flex-col gap-1">
@@ -16,10 +16,10 @@
 				Bill To:
 			</p>
 			<p class="text-lg font-semibold">
-				Ghyah Gundono
+				{{ formInfoData.to.name.value }}
 			</p>
 			<p class="text-sm">
-				1901 Thomridge Cir. Shiloh, Hawaii 81063
+				{{ formInfoData.to.address.value }}
 			</p>
 		</div>
 		<div class="flex flex-col gap-1">
@@ -27,7 +27,7 @@
 				Issued On:
 			</p>
 			<p class="text-lg">
-				11 March, 2023
+				{{ formInfoData.dates.issued.value }}
 			</p>
 		</div>
 		<div class="flex flex-col gap-1">
@@ -35,14 +35,15 @@
 				Due On:
 			</p>
 			<p class="text-lg">
-				16 March, 2023
+				{{ formInfoData.dates.due.value }}
 			</p>
 		</div>
 	</article>
 </template>
 
 <script setup lang="ts">
-
+import { useCreateInvoice } from '@/composables/invoice/create'
+const { formInfoData } = useCreateInvoice()
 </script>
 
 <style scoped>

@@ -1,14 +1,15 @@
 
 <template>
-	<form class="flex flex-col" @submit="step++">
+	<form class="flex flex-col" @submit.prevent="step++">
 		<h4 class="form-title">
 			<span>Bill From</span>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
-				<label for="bg">Name</label>
+				<label for="from_name">Name</label>
 				<input
-					id="bg"
+					id="from_name"
+					v-model="formInfoData.from.name.value"
 					placeholder="Enter name"
 					type="text"
 					class="input-field"
@@ -16,9 +17,10 @@
 				>
 			</div>
 			<div class="field">
-				<label for="tx">Address</label>
+				<label for="from_address">Address</label>
 				<input
-					id="tx"
+					id="from_address"
+					v-model="formInfoData.from.address.value"
 					placeholder="Location / Email / Phone"
 					type="text"
 					class="input-field"
@@ -32,9 +34,10 @@
 		</h4>
 		<div class="form-flex">
 			<div class="field">
-				<label for="bg">Name</label>
+				<label for="to_name">Name</label>
 				<input
-					id="bg"
+					id="to_name"
+					v-model="formInfoData.to.name.value"
 					placeholder="Enter name"
 					type="text"
 					class="input-field"
@@ -42,9 +45,10 @@
 				>
 			</div>
 			<div class="field">
-				<label for="tx">Address</label>
+				<label for="to_address">Address</label>
 				<input
-					id="tx"
+					id="to_address"
+					v-model="formInfoData.to.address.value"
 					placeholder="Location / Email / Phone"
 					type="text"
 					class="input-field"
@@ -58,8 +62,12 @@
 		</h4>
 		<div class="form-flex">
 			<div class="field">
-				<label for="logo">Select Logo</label>
-				<DateInput />
+				<label for="logo">Issued On</label>
+				<DateInput v-model="formInfoData.dates.issued.value" :disabled-date="()=>false" />
+			</div>
+			<div class="field">
+				<label for="logo">Due On</label>
+				<DateInput v-model="formInfoData.dates.due.value" :disabled-date="()=>false" />
 			</div>
 		</div>
 		<button class="modal-btn mt-12" type="submit">
@@ -69,24 +77,19 @@
 </template>
 
 <script setup lang="ts">
-import { useCreateInvoice, useGoogleFont, useFormUsage } from '@/composables/invoice/index'
+import { useCreateInvoice, useFormUsage } from '@/composables/invoice/index'
 
-const { formCustomisationData, resetColors, resetLogo, resetFont } = useCreateInvoice()
+const { formInfoData } = useCreateInvoice()
 const { step } = useFormUsage()
-const { loading, fonts, getFonts, loadingFontLink } = useGoogleFont()
 
-const updateLogo = (e: any) => {
-	const file = e.target.files[0]
-	formCustomisationData.logo.logoName.value = file.name
-	const reader = new FileReader()
-	reader.readAsDataURL(file)
-	reader.onload = () => {
-		formCustomisationData.logo.url.value = reader.result
-	}
-}
-onMounted(() => {
-	getFonts()
-})
+// const disabledDate = computed(() => (date:any) => {
+// 	    const currentDate = new Date(date)
+//         const passedDate = new Date(credential.date.value)
+//         if (currentDate.toLocaleDateString().split('T')[0] === passedDate.toLocaleDateString().split('T')[0]) {
+//             return false
+//         }
+// 	  return new Date(credential.date.value) > date
+// })
 
 </script>
 

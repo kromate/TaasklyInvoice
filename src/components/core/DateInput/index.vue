@@ -27,24 +27,18 @@
 import DatePicker from 'vue-datepicker-next'
 import './themes/styles.css'
 import props from './props'
-import { formatToDateInput } from '~~/src/composables/utils'
 
 const emit = defineEmits(['update:modelValue'])
 
 const propsValue = defineProps({
   ...props
 })
-
 const dateInput = ref(propsValue.modelValue)
 
 const handleDate = (date: any) => {
 	dateInput.value = date
 	emit('update:modelValue', date)
 }
-
-onMounted(() => {
-	dateInput.value = formatToDateInput(propsValue.modelValue)
-})
 
 </script>
 

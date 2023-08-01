@@ -10,16 +10,32 @@ export const insertGoogleFont = (fontUrl: string, loadingCallback?: () => void):
   linkTag.rel = 'stylesheet'
 
   if (loadingCallback) {
-    // Add an event listener to check when the font is loaded
     linkTag.onload = loadingCallback
   }
 
   document.head.appendChild(linkTag)
-
-  // If the font is already loaded (cached), invoke the loading callback directly
   if (linkTag.sheet) {
     if (loadingCallback) {
       loadingCallback()
     }
   }
+}
+
+export const formatDate = (inputDate: Date): string => {
+  return inputDate.toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })
+}
+
+export const convertToCurrency = (value: number) => {
+  if (typeof value === 'undefined') return
+
+  let parseAmount
+  if (typeof value !== 'number') {
+    parseAmount = parseFloat((value as string).replace(',', '').replace(' ', ''))
+  } else {
+    parseAmount = value
+  }
+  return new Intl.NumberFormat('en-NG', {
+    style: 'currency',
+    currency: 'NGN'
+  }).format(parseAmount)
 }

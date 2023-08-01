@@ -1,9 +1,9 @@
 export default {
-    modelValue: { type: Array, default: () => [] },
+    modelValue: { type: String, default: '' },
     format: {
         type: String,
         required: false,
-        default: 'YYYY-MM-DD'
+        default: 'DD MMMM YYYY'
     },
     placeholder: {
         type: String,
@@ -43,7 +43,7 @@ export default {
     clearable: {
         type: Boolean,
         required: false,
-        default: false
+        default: true
     },
     disabled: {
         type: Boolean,
