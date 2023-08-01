@@ -1,6 +1,6 @@
 
 <template>
-	<nav aria-label="Progress" class="z-30">
+	<nav aria-label="Progress" class="z-30 w-1/2 md:w-full">
 		<ol role="list" class="space-y-4 md:flex md:space-x-2 md:space-y-0 ">
 			<li v-for="step in steps" :key="step.name" class="md:flex-1 " @click="moveToStep(step.index)">
 				<a v-if="formStep > step.index" :href="step.href" class="group flex flex-col border-l-4 border-secondary py-2 pl-4 border-indigo-800 md:border-l-0 md:border-t-4 md:pb-0 md:pl-0 md:pt-4">

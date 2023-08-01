@@ -68,7 +68,6 @@ export const useCreateInvoice = () => {
     }
     const DownloadOutput = async () => {
         const pdfSection = document.querySelector('#output')
-        console.log(pdfSection)
         const canvas = await html2canvas(pdfSection as HTMLElement)
         DownloadCanvasAsImage(canvas, 'invoice')
 
