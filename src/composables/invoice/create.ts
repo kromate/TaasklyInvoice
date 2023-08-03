@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-absolute-path
 import { useStorage } from '@vueuse/core'
 import html2canvas from 'html2canvas'
+import html2pdf from 'html2pdf.js'
 import defaultLogo from '@/assets/images/logo.svg'
 import { formatDate } from '@/composables/utils'
-import { exportToPDF } from '#imports'
 
 const formCustomisationData = {
     background_color: useStorage('background_color', '#ffffff'),
@@ -68,11 +68,27 @@ export const useCreateInvoice = () => {
         formCustomisationData.font_family.value = 'Space Grotesk'
     }
     const DownloadOutput = async () => {
-        const pdfSection = document.querySelector('#output')
-        const canvas = await html2canvas(pdfSection as HTMLElement)
-        DownloadCanvasAsImage(canvas, 'invoice')
+        const outputSection = document.querySelector('#output')
+        const outputContainer = document.querySelector('#outputContainer')
+        console.log(outputSection)
+        console.log(outputContainer)
+        const formerWidth = outputSection?.style.width
+        const formerDisplay = outputContainer?.style.display
+        const formerPos = outputSection?.style.position
+        const formerzIndex = outputSection?.style.zIndex
+        outputSection.style.width = '600px'
+        outputContainer.style.display = 'flex'
+        outputContainer.style.position = 'fixed'
+        outputContainer.style.zIndex = '-100'
 
-        // exportToPDF('invoice', pdfSection as HTMLElement)
+        const canvas = await html2canvas(outputSection as HTMLElement)
+        // html2pdf().from(outputSection as HTMLElement).save('invoice.pdf')
+
+        outputSection.style.width = formerWidth
+        outputContainer.style.display = formerDisplay
+        outputContainer.style.position = formerPos
+        outputContainer.style.zIndex = formerzIndex
+        DownloadCanvasAsImage(canvas, 'invoice')
     }
     return {
         formCustomisationData, formInfoData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, DownloadOutput

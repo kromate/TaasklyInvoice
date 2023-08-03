@@ -4,12 +4,13 @@
 		<header class="flex gap-2 items-center border-b border-gray-300 pb-4">
 			<img :src="formCustomisationData.logo.url.value" alt="logo" :style="logoStyle">
 		</header>
-		<InvoiceInfo />
-		<InvoiceList />
+		<InvoiceOutputTemplate1InvoiceInfo />
+		<InvoiceOutputTemplate1InvoiceList />
 	</div>
 </template>
 
 <script setup lang="ts">
+
 import { useCreateInvoice } from '@/composables/invoice/create'
 
 const { formCustomisationData } = useCreateInvoice()

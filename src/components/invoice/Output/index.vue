@@ -1,5 +1,5 @@
 <template>
-	<section class="md:flex flex-col sub_section text-dark output" :class="[hideOnSmallScreens? 'hidden': '']">
+	<section id="outputContainer" class="md:flex flex-col sub_section text-dark output" :class="[hideOnSmallScreens? 'hidden': '']">
 		<template_1 />
 	</section>
 </template>
