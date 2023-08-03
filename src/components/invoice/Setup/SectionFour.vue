@@ -97,3 +97,4 @@ td {
 	@apply py-4 px-2
 }
 </style>
+
