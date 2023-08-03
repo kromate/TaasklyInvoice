@@ -70,8 +70,7 @@ export const useCreateInvoice = () => {
     const DownloadOutput = async () => {
         const outputSection = document.querySelector('#output')
         const outputContainer = document.querySelector('#outputContainer')
-        console.log(outputSection)
-        console.log(outputContainer)
+
         const formerWidth = outputSection?.style.width
         const formerDisplay = outputContainer?.style.display
         const formerPos = outputSection?.style.position
