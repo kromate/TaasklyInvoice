@@ -25,8 +25,9 @@ import { useFormUsage } from '@/composables/invoice/usage'
 const { moveToStep, step: formStep } = useFormUsage()
 
 const steps = [
-  { id: 'Step 1', name: 'Customisation', href: '#', status: 'complete', index: 1 },
-  { id: 'Step 2', name: 'Invoice Info', href: '#', status: 'current', index: 2 },
-  { id: 'Step 3', name: 'Invoice List', href: '#', status: 'upcoming', index: 3 }
+  { id: 'Step 1', name: 'Customisation', href: '#', index: 1 },
+  { id: 'Step 2', name: 'Invoice Info', href: '#', index: 2 },
+  { id: 'Step 3', name: 'Invoice List', href: '#', index: 3 },
+  { id: 'Step 4', name: 'Invoice Optional', href: '#', index: 4 }
 ]
 </script>

@@ -12,6 +12,7 @@
 				<InvoiceSetupSectionOne v-if="step ===1" />
 				<InvoiceSetupSectionTwo v-else-if="step ===2" />
 				<InvoiceSetupSectionThree v-else-if="step ===3" />
+				<InvoiceSetupSectionFour v-else-if="step ===4" />
 			</transition>
 		</section>
 	</section>
