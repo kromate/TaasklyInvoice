@@ -3,9 +3,14 @@
 	<form class="flex flex-col" @submit.prevent="step++">
 		<h4 class="form-title">
 			<span>Form colors</span>
-			<button class="text-dark text-sm" type="button" @click="resetColors">
-				Reset
-			</button>
+			<div class="flex items-center gap-2 md:gap-4">
+				<span class="text-xs text-grey_two cursor-pointer" @click="formCustomisationData.color_mode.value = !formCustomisationData.color_mode.value">
+					({{ formCustomisationData.color_mode.value ? 'Color Picker':'Hex Code' }})
+				</span>
+				<button class="text-dark text-sm" type="button" @click="resetColors">
+					Reset
+				</button>
+			</div>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
@@ -14,18 +19,20 @@
 					id="bg"
 					v-model="formCustomisationData.background_color.value"
 					placeholder="Select background color"
-					type="color"
+					:type="formCustomisationData.color_mode.value ? 'color':'text'"
 					class="input-field"
 					required
 				>
 			</div>
 			<div class="field">
-				<label for="tx">Text Color</label>
+				<label for="tx">Text Color
+
+				</label>
 				<input
 					id="tx"
 					v-model="formCustomisationData.text_color.value"
 					placeholder="Select text color"
-					type="color"
+					:type="formCustomisationData.color_mode.value ? 'color':'text'"
 					class="input-field"
 					required
 				>
@@ -88,7 +95,7 @@ const updateLogo = (e: any) => {
 	const reader = new FileReader()
 	reader.readAsDataURL(file)
 	reader.onload = () => {
-		formCustomisationData.logo.url.value = reader.result
+		formCustomisationData.logo.url.value = reader.result as any
 	}
 }
 onMounted(() => {
@@ -98,5 +105,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
+label{
+	@apply flex justify-between items-center w-full
+}
 </style>

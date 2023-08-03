@@ -18,15 +18,7 @@
 		<div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
 			<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
 				<img class="w-40" src="@/assets/images/logo_text.svg" alt="Taaskly Logo">
-				<!-- <div class="mt-24 sm:mt-32 lg:mt-16">
-					<a href="#" class="inline-flex space-x-6">
-						<span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">What's new</span>
-						<span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-							<span>Just shipped v1.0</span>
-							<ChevronRightIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
-						</span>
-					</a>
-				</div> -->
+
 				<h1 class="mt-10 text-3xl font-bold tracking-tight text-dark sm:text-6xl">
 					Create professional and customized invoices in seconds
 				</h1>
@@ -79,7 +71,7 @@ const benefits = ref([
 	},
 	{
 		name: 'Multiple template <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">Coming Soon</span>',
-		description: 'Taaskly Invoice is customizable. You can change the colors, logo, and more.',
+		description: 'Taaskly Invoice has multiple templates to choose from. You can choose the one that suits you best.',
 		icon: CheckCircleIcon
 	}
 ])

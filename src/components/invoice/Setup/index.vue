@@ -2,9 +2,9 @@
 	<section class="flex flex-col sub_section">
 		<header class="flex justify-between">
 			<Stepper />
-			<button class="btn-primary md:hidden">
+			<nuxt-link to="/preview" class="btn-primary md:hidden">
 				Preview
-			</button>
+			</nuxt-link>
 		</header>
 
 		<section class="mt-12 relative">

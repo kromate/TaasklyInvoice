@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-absolute-path
 import { useStorage } from '@vueuse/core'
 import html2canvas from 'html2canvas'
-// @ts-expect-error
 import defaultLogo from '@/assets/images/logo.svg'
 import { formatDate } from '@/composables/utils'
 import { exportToPDF } from '#imports'
@@ -9,6 +8,7 @@ import { exportToPDF } from '#imports'
 const formCustomisationData = {
     background_color: useStorage('background_color', '#ffffff'),
     text_color: useStorage('text_color', '#000000'),
+    color_mode: useStorage('color_mode', false),
     font_family: useStorage('font_family', 'Space Grotesk'),
     logo: {
         url: useStorage('logo_url', defaultLogo),
@@ -57,6 +57,7 @@ export const useCreateInvoice = () => {
     const resetColors = () => {
         formCustomisationData.background_color.value = '#ffffff'
         formCustomisationData.text_color.value = '#000000'
+        formCustomisationData.color_mode.value = false
     }
     const resetLogo = () => {
         formCustomisationData.logo.url.value = defaultLogo
