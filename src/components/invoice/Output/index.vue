@@ -1,7 +1,7 @@
 <template>
-	<section id="outputContainer" class="md:flex flex-col sub_section text-dark output relative" :class="[hideOnSmallScreens? 'hidden': '']">
+	<section id="outputContainer" class="md:flex flex-col sub_section text-dark output" :class="[hideOnSmallScreens? 'hidden': '']">
 		<template_1 />
-		<InvoiceExtrasAttribution />
+		<!-- <Skeleton radius="4px" /> -->
 	</section>
 </template>
 

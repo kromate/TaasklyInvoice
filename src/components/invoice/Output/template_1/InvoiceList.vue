@@ -1,51 +1,52 @@
 <template>
-	<table class="table-auto w-full mt-12">
-		<caption class="caption-top text-left text-sm  font-bold">
+	<table class="w-full mt-12">
+		<caption class="text-left text-sm  font-bold mb-4">
 			Invoice Detail
 		</caption>
 		<thead>
 			<tr
-				class="border-separate border-spacing-2 border-b border-t "
+				class="font-black border-y"
 			>
-				<th class="text-left py-2  font-medium">
+				<th>
 					Description
 				</th>
-				<th class="text-left  font-medium">
+				<th>
 					Price
 				</th>
-				<th class="text-left  font-medium">
+				<th>
 					Qty
 				</th>
-				<th class="text-right  font-medium">
+				<th class="!text-right">
 					Total Amount
 				</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr v-for="item in formattedList" :key="item.id">
-				<td class="pt-2">
+			<tr v-for="item in formattedList" :key="item.id" class="h-10 pb-4">
+				<td>
 					{{ item.item }}
 				</td>
 				<td>{{ item.quantity }}</td>
 				<td>{{ convertToCurrency(item.price) }}</td>
 
-				<td class="text-right">
+				<td class="!text-right">
 					{{ convertToCurrency(item.quantity * item.price) }}
 				</td>
 			</tr>
 
 			<tr
-				class="border-separate border-spacing-2 border-b border-t"
+				class="border-y mt-8 "
 			>
-				<td class="py-2 font-bold">
+				<td class="font-bold up">
 					Sub Total
 				</td>
-				<td class="font-bold text-right" colspan="3">
+				<td class="font-bold !text-right up" colspan="3">
 					{{ convertToCurrency(subTotal()) }}
 				</td>
 			</tr>
 		</tbody>
 	</table>
+
 </template>
 
 <script setup lang="ts">
@@ -61,4 +62,10 @@ const formattedList = computed(() => {
 
 <style scoped>
 
+th, .up{
+	@apply h-10 text-left
+}
+.set{
+	@apply  items-center
+}
 </style>

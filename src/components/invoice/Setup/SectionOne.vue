@@ -87,7 +87,7 @@ import { useCreateInvoice, useGoogleFont, useFormUsage } from '@/composables/inv
 
 const { formCustomisationData, resetColors, resetLogo, resetFont } = useCreateInvoice()
 const { step } = useFormUsage()
-const { loading, fonts, getFonts, loadingFontLink } = useGoogleFont()
+const { loading, fonts, loadingFontLink } = useGoogleFont()
 
 const updateLogo = (e: any) => {
 	const file = e.target.files[0]
@@ -98,9 +98,6 @@ const updateLogo = (e: any) => {
 		formCustomisationData.logo.url.value = reader.result as any
 	}
 }
-onMounted(() => {
-	getFonts()
-})
 
 </script>
 

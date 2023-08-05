@@ -1,11 +1,8 @@
 
 <template>
-	<form class="flex flex-col" @submit.prevent="DownloadOutput">
-		<h4 class="form-title">
+	<form class="flex flex-col" @submit.prevent="step++">
+		<h4 class="form-title mb-4">
 			<span>Form List</span>
-			<button class="text-dark text-sm" type="button" @click="resetColors">
-				Reset
-			</button>
 		</h4>
 
 		<table class="table-auto w-full overflow-x-clip">
@@ -72,7 +69,7 @@
 		</div>
 
 		<button class="modal-btn mt-12" type="submit">
-			Download
+			Continue
 		</button>
 	</form>
 </template>

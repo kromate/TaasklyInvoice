@@ -1,12 +1,13 @@
 import { useStorage } from '@vueuse/core'
 import axios from 'axios'
 import { useCreateInvoice } from './create'
+import googleFonts from './fonts'
 import { insertGoogleFont } from '@/composables/utils'
 
 const { formCustomisationData } = useCreateInvoice()
 
 const step = useStorage('step', 1)
-const fonts = ref([])
+const fonts = ref(googleFonts)
 
 export const useFormUsage = () => {
     const moveToStep = (stepValue: number) => {
@@ -27,15 +28,5 @@ export const useGoogleFont = () => {
         })
     }, { immediate: true })
 
-    const getFonts = async () => {
-        if (fonts.value.length > 0) return
-        loading.value = true
-        const res = await axios.get('https://fonts.google.com/metadata/fonts')
-        fonts.value = res.data.familyMetadataList.map((font: any) => {
-            return font.family
-        })
-        loading.value = false
-    }
-
-    return { loading, fonts, getFonts, loadingFontLink }
+    return { loading, fonts, loadingFontLink }
 }
