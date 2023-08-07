@@ -22,8 +22,6 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
     return outputSection.offsetHeight || height.value || 1000
 })
 
-        console.log(invoiceDocumentHeight.value)
-
     const formatBeforeDownload = () => {
         thElements.forEach((thElement: HTMLElement) => {
             thElement.classList.add('pb-4')
