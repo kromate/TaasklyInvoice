@@ -32,7 +32,7 @@
 				<input
 					id="from_address"
 					v-model="formExtraData.extra_fees.discount.value"
-					placeholder="Enter percentage"
+					placeholder="Enter Discount"
 					type="number"
 					class="input-field"
 					required
