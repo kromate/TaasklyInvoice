@@ -64,7 +64,7 @@
 		<div class="w-full flex justify-end mt-3 font-bold text-dark">
 			<div class="w-1/2 flex justify-between">
 				<span class="font-bold">Sub-total:</span>
-				<span class="font-bold text-xl">{{ convertToCurrency(subTotal()) }}</span>
+				<span class="font-bold text-xl">{{ convertToCurrency(subTotal) }}</span>
 			</div>
 		</div>
 

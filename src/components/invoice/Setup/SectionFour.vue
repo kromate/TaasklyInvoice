@@ -2,27 +2,38 @@
 <template>
 	<form class="flex flex-col" @submit.prevent="DownloadOutput">
 		<h4 class="form-title">
-			<span>Bill From</span>
+			<span>Extra Fees</span>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
-				<label for="from_name">Name</label>
+				<label for="from_name">Delivery (NGN)</label>
 				<input
 					id="from_name"
-					v-model="formInfoData.from.name.value"
-					placeholder="Enter name"
-					type="text"
+					v-model="formExtraData.extra_fees.delivery.value"
+					placeholder="Enter price"
+					type="number"
 					class="input-field"
 					required
 				>
 			</div>
-			<div class="field">
-				<label for="from_address">Address</label>
+			<!-- <div class="field">
+				<label for="from_address">Tax (%)</label>
 				<input
 					id="from_address"
-					v-model="formInfoData.from.address.value"
-					placeholder="Location / Email / Phone"
-					type="text"
+					v-model="formExtraData.extra_fees.tax.value"
+					placeholder="Enter percentage"
+					type="number"
+					class="input-field"
+					required
+				>
+			</div> -->
+			<div class="field">
+				<label for="from_address">Discount (NGN)</label>
+				<input
+					id="from_address"
+					v-model="formExtraData.extra_fees.discount.value"
+					placeholder="Enter percentage"
+					type="number"
 					class="input-field"
 					required
 				>
@@ -30,44 +41,44 @@
 		</div>
 
 		<h4 class="form-title">
-			<span>Bill To</span>
+			<span>File Name</span>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
 				<label for="to_name">Name</label>
 				<input
 					id="to_name"
-					v-model="formInfoData.to.name.value"
-					placeholder="Enter name"
+					v-model="formExtraData.file.name.value"
+					placeholder="Enter File name"
 					type="text"
 					class="input-field"
 					required
 				>
 			</div>
 			<div class="field">
-				<label for="to_address">Address</label>
-				<input
-					id="to_address"
-					v-model="formInfoData.to.address.value"
-					placeholder="Location / Email / Phone"
-					type="text"
-					class="input-field"
-					required
-				>
+				<label for="to_address">File Type</label>
+				<select id="to_address" v-model="formExtraData.file.type.value" name="" class="input-field">
+					<option value="IMG">
+						Image
+					</option>
+					<option value="PDF">
+						PDF
+					</option>
+				</select>
 			</div>
 		</div>
 
 		<h4 class="form-title">
-			<span>Dates</span>
+			<span>Extra Notes</span>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
-				<label for="logo">Issued On</label>
-				<DateInput v-model="formInfoData.dates.issued.value" :disabled-date="()=>false" />
+				<label for="logo">Note</label>
+				<textarea v-model="formExtraData.notes.note.value" class="input-field" rows="5" />
 			</div>
 			<div class="field">
-				<label for="logo">Due On</label>
-				<DateInput v-model="formInfoData.dates.due.value" :disabled-date="()=>false" />
+				<label for="logo">T & C</label>
+				<textarea v-model="formExtraData.notes.t_n_c.value" class="input-field" rows="5" />
 			</div>
 		</div>
 		<button class="modal-btn mt-12" type="submit">
@@ -79,10 +90,12 @@
 <script setup lang="ts">
 import { useCreateInvoice } from '@/composables/invoice/index'
 
-const { formInfoData, DownloadOutput } = useCreateInvoice()
+const { formExtraData, DownloadOutput } = useCreateInvoice()
 
 </script>
 
 <style scoped>
-
+textarea {
+	@apply p-4 h-auto
+}
 </style>

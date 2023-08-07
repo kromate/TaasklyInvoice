@@ -28,6 +28,21 @@ const formInfoData = {
         due: useStorage('due', `${formatDate(new Date())}`)
     }
 }
+const formExtraData = {
+    extra_fees: {
+        delivery: useStorage('delivery', 0),
+        tax: useStorage('tax', 0),
+        discount: useStorage('discount', 0)
+    },
+    file: {
+        name: useStorage('file_name', 'invoice'),
+        type: useStorage('file_type', 'IMG')
+    },
+    notes: {
+        note: useStorage('note', ''),
+        t_n_c: useStorage('t_n_c', '')
+    }
+}
 
 type FormList = {
     id: number;
@@ -45,9 +60,12 @@ export const useFormData = () => {
         const id = formListData.value[formListData.value.length - 1].id + 1
         formListData.value.push({ id, item: '', quantity: 0, price: 0 })
     }
-    const subTotal = () => {
+    const subTotal = computed(() => {
         return formListData.value.reduce((acc, cur) => acc + (cur.quantity * cur.price), 0)
-    }
+    })
+    const total = computed(() => {
+        return subTotal.value + formExtraData.extra_fees.delivery.value - formExtraData.extra_fees.discount.value
+    })
     const removeItem = (id: number) => {
         formListData.value = formListData.value.filter((item) => item.id !== id)
     }
@@ -65,6 +83,6 @@ export const useFormData = () => {
         formCustomisationData.font_family.value = 'Space Grotesk'
     }
     return {
-        formCustomisationData, formInfoData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal
+        formCustomisationData, formInfoData, formExtraData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, total
     }
 }

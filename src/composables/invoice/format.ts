@@ -1,3 +1,4 @@
+import { useElementSize, useMediaQuery } from '@vueuse/core'
 
 const globalData = ref({
     formerWidth: '',
@@ -7,12 +8,21 @@ const globalData = ref({
     formerzIndex: ''
 }) as any
 
+const isLargeScreen = useMediaQuery('(min-width: 768px)')
+
 export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HTMLElement) => {
     const thElements = document.querySelectorAll<HTMLElement>('#output thead th')
     const upElements = document.querySelectorAll<HTMLElement>('#output td.up')
     const attributionElement = document.querySelector<HTMLElement>('#attribution')
 
     // -bottom-20
+
+    const invoiceDocumentHeight = computed(() => {
+        const { height } = useElementSize(outputSection)
+    return outputSection.offsetHeight || height.value || 1000
+})
+
+        console.log(invoiceDocumentHeight.value)
 
     const formatBeforeDownload = () => {
         thElements.forEach((thElement: HTMLElement) => {
@@ -31,9 +41,8 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         outputSection.style.width = '600px'
         outputContainer.style.display = 'flex'
         outputContainer.style.position = 'fixed'
-        outputContainer.style.height = outputSection.offsetHeight + 30 + 'px'
+        outputContainer.style.height = invoiceDocumentHeight.value + 30 + 'px'
         outputContainer.style.zIndex = '-100'
-
         attributionElement?.classList.remove('bottom-4')
         attributionElement?.classList.add('-bottom-20')
     }

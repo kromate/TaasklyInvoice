@@ -41,12 +41,11 @@
 					Sub Total
 				</td>
 				<td class="font-bold !text-right up" colspan="3">
-					{{ convertToCurrency(subTotal()) }}
+					{{ convertToCurrency(subTotal) }}
 				</td>
 			</tr>
 		</tbody>
 	</table>
-
 </template>
 
 <script setup lang="ts">

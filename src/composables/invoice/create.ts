@@ -4,7 +4,7 @@ import html2pdf from 'html2pdf.js'
 import { useFormatInvoice } from './format'
 import { useFormData } from './data'
 
-const { defaultLogo, formCustomisationData, formInfoData, formListData, addNewItem, removeItem, resetColors, resetFont, resetLogo, subTotal } = useFormData()
+const { defaultLogo, formCustomisationData, formInfoData, formExtraData, formListData, addNewItem, removeItem, resetColors, resetFont, resetLogo, subTotal, total } = useFormData()
 
 export const useCreateInvoice = () => {
     const DownloadOutput = async () => {
@@ -16,11 +16,14 @@ export const useCreateInvoice = () => {
 
         const canvas = await html2canvas(outputSection, { height: outputSection.offsetHeight + 100 })
         formatAfterDownload()
-        // html2pdf().from(outputSection).save('invoice.pdf')
-        DownloadCanvasAsImage(canvas, 'invoice')
+        if (formExtraData.file.type.value === 'IMG') {
+            DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
+        } else {
+            html2pdf().from(outputSection).save(formExtraData.file.name.value)
+        }
     }
     return {
-        formCustomisationData, formInfoData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, DownloadOutput
+        formCustomisationData, formInfoData, formExtraData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, DownloadOutput, total
     }
 }
 

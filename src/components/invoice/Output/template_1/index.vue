@@ -6,6 +6,7 @@
 		</header>
 		<InvoiceOutputTemplate1InvoiceInfo />
 		<InvoiceOutputTemplate1InvoiceList />
+		<InvoiceOutputTemplate1InvoiceExtra />
 		<InvoiceExtrasAttribution />
 	</div>
 </template>
