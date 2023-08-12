@@ -1,10 +1,13 @@
 // eslint-disable-next-line import/no-absolute-path
 import html2canvas from 'html2canvas'
 import html2pdf from 'html2pdf.js'
+import { useStorage } from '@vueuse/core'
 import { useFormatInvoice } from './format'
 import { useFormData } from './data'
 
 const { defaultLogo, formCustomisationData, formInfoData, formExtraData, formListData, addNewItem, removeItem, resetColors, resetFont, resetLogo, subTotal, total } = useFormData()
+
+export const experimentalCanvas = useStorage('canvas_x', {})
 
 export const useCreateInvoice = () => {
     const DownloadOutput = async () => {
@@ -14,14 +17,18 @@ export const useCreateInvoice = () => {
 
         formatBeforeDownload()
 
-        const canvas = await html2canvas(outputSection, { height: outputSection.offsetHeight + 100 })
+        const canvas = await html2canvas(outputSection)
+        experimentalCanvas.value = outputSection
+        console.log(experimentalCanvas.value)
         formatAfterDownload()
-        if (formExtraData.file.type.value === 'IMG') {
-            DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
-        } else {
-            html2pdf().from(outputSection).save(formExtraData.file.name.value)
-        }
+        useRouter().push('/canvas')
+        // if (formExtraData.file.type.value === 'IMG') {
+        //     DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
+        // } else {
+        //     html2pdf().from(outputSection).save(formExtraData.file.name.value)
+        // }
     }
+
     return {
         formCustomisationData, formInfoData, formExtraData, formListData, defaultLogo, resetColors, resetLogo, resetFont, addNewItem, removeItem, subTotal, DownloadOutput, total
     }
