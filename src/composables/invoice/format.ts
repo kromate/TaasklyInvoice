@@ -15,10 +15,10 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
 
     // -bottom-20
 
-    const invoiceDocumentHeight = computed(() => {
-        const { height } = useElementSize(outputSection)
-    return outputSection.offsetHeight || height.value || 1000
-})
+//     const invoiceDocumentHeight = computed(() => {
+//         const { height } = useElementSize(outputSection)git a
+//     return outputSection.offsetHeight || height.value || 1000
+// })
 
     const formatBeforeDownload = () => {
         thElements.forEach((thElement: HTMLElement) => {
@@ -27,20 +27,12 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         upElements.forEach((thElement: HTMLElement) => {
             thElement.classList.add('pb-4')
         })
+        outputContainer.classList.remove('hidden')
+        const rect = outputSection.getBoundingClientRect()
 
-        globalData.formerWidth = outputSection?.style.width
-        globalData.formerHeight = outputContainer?.style.height
-        globalData.formerDisplay = outputContainer?.style.display
-        globalData.formerPos = outputContainer?.style.position
-        globalData.formerzIndex = outputContainer?.style.zIndex
+        globalData.formerWidth = outputSection.style.width
 
         outputSection.style.width = '600px'
-        outputContainer.style.display = 'flex'
-        outputContainer.style.position = 'fixed'
-        outputContainer.style.height = invoiceDocumentHeight.value + 50 + 'px'
-        outputContainer.style.zIndex = '-100'
-        attributionElement?.classList.remove('bottom-4')
-        attributionElement?.classList.add('-bottom-20')
     }
 
     const formatAfterDownload = () => {
@@ -50,14 +42,10 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         upElements.forEach((thElement: HTMLElement) => {
             thElement.classList.remove('pb-4')
         })
-        attributionElement?.classList.add('bottom-4')
-        attributionElement?.classList.remove('-bottom-20')
+
+        outputContainer.classList.add('hidden')
 
         outputSection.style.width = globalData.formerWidth
-        outputContainer.style.height = globalData.formerHeight
-        outputContainer.style.display = globalData.formerDisplay
-        outputContainer.style.position = globalData.formerPos
-        outputContainer.style.zIndex = globalData.formerzIndex
     }
 
     return {
