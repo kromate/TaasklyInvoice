@@ -27,7 +27,7 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         upElements.forEach((thElement: HTMLElement) => {
             thElement.classList.add('pb-4')
         })
-
+        outputContainer.classList.remove('hidden')
         const rect = outputSection.getBoundingClientRect()
 
         globalData.formerWidth = outputSection.style.width
@@ -42,8 +42,8 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         upElements.forEach((thElement: HTMLElement) => {
             thElement.classList.remove('pb-4')
         })
-        // attributionElement?.classList.add('bottom-4')
-        // attributionElement?.classList.remove('-bottom-20')
+
+        outputContainer.classList.add('hidden')
 
         outputSection.style.width = globalData.formerWidth
     }
