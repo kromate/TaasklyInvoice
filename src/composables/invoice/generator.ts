@@ -7,37 +7,41 @@ function domElementToImage(
   element: HTMLElement,
   options: DOMElementToImageOptions
 ): HTMLImageElement {
-  const canvas = document.createElement('canvas')
-  const { width, height } = options
-
-  canvas.width = width
-  canvas.height = height
-
+const canvas = document.createElement('canvas')
   const context = canvas.getContext('2d')
 
   if (!context) {
-    throw new Error('Could not create canvas context')
+    throw new Error('Canvas context not available.')
   }
 
-  context.fillStyle = 'white'
-  context.fillRect(0, 0, width, height)
+  const rect = element.getBoundingClientRect()
+  canvas.width = rect.width
+  canvas.height = rect.height
 
-  const svgData = new XMLSerializer().serializeToString(element)
-  const img = new Image()
+  context.clearRect(0, 0, canvas.width, canvas.height)
 
-  img.onload = () => {
-    context.drawImage(img, 0, 0, width, height)
-  }
+  const clonedElement = element.cloneNode(true) as HTMLElement
+  clonedElement.style.position = 'static'
+  clonedElement.style.top = '0'
+  clonedElement.style.left = '0'
 
-  img.src = `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svgData)))}`
+  const elementHTML = new XMLSerializer().serializeToString(clonedElement)
 
-  return img
+  const dataUri = `data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='${rect.width}' height='${rect.height}'>
+    <foreignObject width='100%' height='100%'>
+      ${elementHTML}
+    </foreignObject>
+  </svg>`
+
+  const image = new Image()
+  image.src = dataUri
+
+  return image
 }
 
-// Example usage
-const element = document.getElementById('your-element-id') as HTMLElement
-const options = { width: 300, height: 200 }
-const generatedImage = domElementToImage(element, options)
-
-// Append the generated image to the document
+const optionsDefault = { width: 300, height: 200 }
+export const imageGenerator = (element:HTMLElement, options = optionsDefault) => {
+    const generatedImage = domElementToImage(element, options)
+    console.log(generatedImage)
 document.body.appendChild(generatedImage)
+}

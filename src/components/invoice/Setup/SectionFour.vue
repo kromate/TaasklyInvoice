@@ -13,7 +13,6 @@
 					placeholder="Enter price"
 					type="number"
 					class="input-field"
-					required
 				>
 			</div>
 			<!-- <div class="field">
@@ -35,7 +34,6 @@
 					placeholder="Enter Discount"
 					type="number"
 					class="input-field"
-					required
 				>
 			</div>
 		</div>
