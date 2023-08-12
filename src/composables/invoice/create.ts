@@ -1,32 +1,31 @@
 // eslint-disable-next-line import/no-absolute-path
 import html2canvas from 'html2canvas'
 import html2pdf from 'html2pdf.js'
-import { useStorage } from '@vueuse/core'
+import { useMediaQuery } from '@vueuse/core'
 import { useFormatInvoice } from './format'
 import { useFormData } from './data'
 
 const { defaultLogo, formCustomisationData, formInfoData, formExtraData, formListData, addNewItem, removeItem, resetColors, resetFont, resetLogo, subTotal, total } = useFormData()
 
-export const experimentalCanvas = useStorage('canvas_x', {})
-
 export const useCreateInvoice = () => {
     const DownloadOutput = async () => {
+        // const isLargeScreen = useMediaQuery('(min-width: 768px)')
         const outputSection: HTMLElement = document.querySelector('#output')!
         const outputContainer: HTMLElement = document.querySelector('#outputContainer')!
         const { formatAfterDownload, formatBeforeDownload } = useFormatInvoice(outputSection, outputContainer)
-
-        formatBeforeDownload()
+        // if (!isLargeScreen.value) {
+            formatBeforeDownload()
+        //  }
 
         const canvas = await html2canvas(outputSection)
-        experimentalCanvas.value = outputSection
-        console.log(experimentalCanvas.value)
-        formatAfterDownload()
-        useRouter().push('/canvas')
-        // if (formExtraData.file.type.value === 'IMG') {
-        //     DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
-        // } else {
-        //     html2pdf().from(outputSection).save(formExtraData.file.name.value)
-        // }
+
+            formatAfterDownload()
+
+        if (formExtraData.file.type.value === 'IMG') {
+            DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
+        } else {
+            html2pdf().from(canvas).save(formExtraData.file.name.value)
+        }
     }
 
     return {
