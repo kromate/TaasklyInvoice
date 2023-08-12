@@ -42,6 +42,5 @@ const canvas = document.createElement('canvas')
 const optionsDefault = { width: 300, height: 200 }
 export const imageGenerator = (element:HTMLElement, options = optionsDefault) => {
     const generatedImage = domElementToImage(element, options)
-    console.log(generatedImage)
 document.body.appendChild(generatedImage)
 }

@@ -16,7 +16,7 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
     // -bottom-20
 
 //     const invoiceDocumentHeight = computed(() => {
-//         const { height } = useElementSize(outputSection)
+//         const { height } = useElementSize(outputSection)git a
 //     return outputSection.offsetHeight || height.value || 1000
 // })
 
