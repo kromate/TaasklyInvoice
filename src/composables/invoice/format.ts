@@ -8,8 +8,6 @@ const globalData = ref({
     formerzIndex: ''
 }) as any
 
-const isLargeScreen = useMediaQuery('(min-width: 768px)')
-
 export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HTMLElement) => {
     const thElements = document.querySelectorAll<HTMLElement>('#output thead th')
     const upElements = document.querySelectorAll<HTMLElement>('#output td.up')
@@ -39,7 +37,7 @@ export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HT
         outputSection.style.width = '600px'
         outputContainer.style.display = 'flex'
         outputContainer.style.position = 'fixed'
-        outputContainer.style.height = invoiceDocumentHeight.value + 30 + 'px'
+        outputContainer.style.height = invoiceDocumentHeight.value + 50 + 'px'
         outputContainer.style.zIndex = '-100'
         attributionElement?.classList.remove('bottom-4')
         attributionElement?.classList.add('-bottom-20')

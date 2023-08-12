@@ -64,7 +64,14 @@ export const useFormData = () => {
         return formListData.value.reduce((acc, cur) => acc + (cur.quantity * cur.price), 0)
     })
     const total = computed(() => {
-        return subTotal.value + formExtraData.extra_fees.delivery.value - formExtraData.extra_fees.discount.value
+        const sum = ref(subTotal.value)
+        if (formExtraData.extra_fees.delivery.value) {
+            sum.value += formExtraData.extra_fees.delivery.value
+        }
+        if (formExtraData.extra_fees.discount.value) {
+            sum.value -= formExtraData.extra_fees.discount.value
+        }
+        return sum
     })
     const removeItem = (id: number) => {
         formListData.value = formListData.value.filter((item) => item.id !== id)

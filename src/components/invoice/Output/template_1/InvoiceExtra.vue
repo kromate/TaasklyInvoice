@@ -44,12 +44,12 @@
 					{{ convertToCurrency(formExtraData.extra_fees.discount.value) }}
 				</p>
 			</div>
-			<div v-if="formExtraData.extra_fees.delivery.value" class="flex-inline mt-4">
+			<div class="flex-inline mt-4">
 				<p class="text-lg font-bold left">
 					Total :
 				</p>
 				<p class="text-lg font-bold">
-					{{ convertToCurrency(total) }}
+					{{ convertToCurrency(total.value) }}
 				</p>
 			</div>
 		</section>

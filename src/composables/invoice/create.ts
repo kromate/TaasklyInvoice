@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-absolute-path
 import html2canvas from 'html2canvas'
 import html2pdf from 'html2pdf.js'
+import { useMediaQuery } from '@vueuse/core'
 import { useFormatInvoice } from './format'
 import { useFormData } from './data'
 
@@ -8,18 +9,23 @@ const { defaultLogo, formCustomisationData, formInfoData, formExtraData, formLis
 
 export const useCreateInvoice = () => {
     const DownloadOutput = async () => {
+        const isLargeScreen = useMediaQuery('(min-width: 768px)')
         const outputSection: HTMLElement = document.querySelector('#output')!
         const outputContainer: HTMLElement = document.querySelector('#outputContainer')!
         const { formatAfterDownload, formatBeforeDownload } = useFormatInvoice(outputSection, outputContainer)
+        if (!isLargeScreen.value) {
+            formatBeforeDownload()
+         }
 
-        formatBeforeDownload()
+        const canvas = await html2canvas(outputSection)
+                if (!isLargeScreen.value) {
+            formatAfterDownload()
+         }
 
-        const canvas = await html2canvas(outputSection, { height: outputSection.offsetHeight + 100 })
-        formatAfterDownload()
         if (formExtraData.file.type.value === 'IMG') {
             DownloadCanvasAsImage(canvas, formExtraData.file.name.value)
         } else {
-            html2pdf().from(outputSection).save(formExtraData.file.name.value)
+            html2pdf().from(canvas).save(formExtraData.file.name.value)
         }
     }
     return {
