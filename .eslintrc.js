@@ -22,6 +22,7 @@ module.exports = {
 	],
 	rules: {
 		'vue/no-v-html': 'off',
+		'new-cap': 'off',
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-tabs': 'off',
