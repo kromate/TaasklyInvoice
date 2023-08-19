@@ -1,46 +1,24 @@
-type DOMElementToImageOptions = {
-  width: number;
-  height: number;
-};
+import jsPDF from 'jspdf'
 
-function domElementToImage(
-  element: HTMLElement,
-  options: DOMElementToImageOptions
-): HTMLImageElement {
-const canvas = document.createElement('canvas')
-  const context = canvas.getContext('2d')
-
-  if (!context) {
-    throw new Error('Canvas context not available.')
-  }
-
-  const rect = element.getBoundingClientRect()
-  canvas.width = rect.width
-  canvas.height = rect.height
-
-  context.clearRect(0, 0, canvas.width, canvas.height)
-
-  const clonedElement = element.cloneNode(true) as HTMLElement
-  clonedElement.style.position = 'static'
-  clonedElement.style.top = '0'
-  clonedElement.style.left = '0'
-
-  const elementHTML = new XMLSerializer().serializeToString(clonedElement)
-
-  const dataUri = `data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='${rect.width}' height='${rect.height}'>
-    <foreignObject width='100%' height='100%'>
-      ${elementHTML}
-    </foreignObject>
-  </svg>`
-
-  const image = new Image()
-  image.src = dataUri
-
-  return image
+export const DownloadCanvasAsImage = (canvas: HTMLCanvasElement, name: string) => {
+    const downloadLink = document.createElement('a')
+    downloadLink.setAttribute('download', `${name}.png`)
+    const dataURL = canvas.toDataURL('image/png')
+    const url = dataURL.replace(/^data:image\/png/, 'data:application/octet-stream')
+    downloadLink.setAttribute('href', url)
+    downloadLink.click()
 }
 
-const optionsDefault = { width: 300, height: 200 }
-export const imageGenerator = (element:HTMLElement, options = optionsDefault) => {
-    const generatedImage = domElementToImage(element, options)
-document.body.appendChild(generatedImage)
+export const DownloadCanvasAsPDF = (canvas: HTMLCanvasElement, name: string) => {
+    // Create a new jsPDF instance
+    const pdf = new jsPDF()
+
+    // Convert canvas content to an image data URL
+    const dataURL = canvas.toDataURL('image/jpeg') // Using JPEG format for better compatibility with jsPDF
+
+    // Add image to the PDF document
+    pdf.addImage(dataURL, 'JPEG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight())
+
+    // Save the PDF
+    pdf.save(`${name}.pdf`)
 }
