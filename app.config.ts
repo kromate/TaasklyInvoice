@@ -2,7 +2,7 @@
 export default {
 
     head: {
-        title: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional',
+        title: 'Professional and customizable invoices by Taaskly Invoice',
         htmlAttrs: { lang: 'en' },
         meta: [
             { charset: 'utf-8' },
@@ -13,27 +13,27 @@ export default {
             },
             {
                 name: 'title',
-                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
+                content: 'Professional and customizable invoices by Taaskly Invoice'
             },
             {
                 name: 'description',
-                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
+                content: 'Taaskly Invoice - Create Professional and customized invoices in seconds'
             },
             {
                 name: 'twitter:title',
-                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
+                content: 'Professional and customizable invoices by Taaskly Invoice'
             },
-            { name: 'twitter:image', content: '/favicon.svg' },
+            { name: 'twitter:image', content: 'https://invoice.taaskly.xyz/logo.png' },
             {
                 name: 'twitter:description',
-                content: 'Find the right products and services at the right time.'
+                content: 'Taaskly Invoice - Create Professional and customized invoices in seconds'
             },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@taaskly' },
             { name: 'twitter:creator', content: '@taaskly' },
             {
                 property: 'og:title',
-                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
             { property: 'og:type', content: 'site' },
             { property: 'og:url', content: 'https://invoice.taaskly.xyz/' },
@@ -41,9 +41,10 @@ export default {
             { property: 'og:site_name', content: 'Taaskly' },
             {
                 property: 'og:description',
-                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
 
+            { name: 'pinterest-rich-pin', content: 'true' },
             { name: 'format-detection', content: 'telephone=no' }
         ],
         script: [
