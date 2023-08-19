@@ -2,7 +2,7 @@
 export default {
 
     head: {
-        title: 'Taaskly Invoice - Professional, customized invoices in seconds',
+        title: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional',
         htmlAttrs: { lang: 'en' },
         meta: [
             { charset: 'utf-8' },
@@ -13,15 +13,15 @@ export default {
             },
             {
                 name: 'title',
-                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
+                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
             },
             {
                 name: 'description',
-                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
+                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
             },
             {
                 name: 'twitter:title',
-                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
+                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
             },
             { name: 'twitter:image', content: '/favicon.svg' },
             {
@@ -33,15 +33,15 @@ export default {
             { name: 'twitter:creator', content: '@taaskly' },
             {
                 property: 'og:title',
-                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
+                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
             },
             { property: 'og:type', content: 'site' },
             { property: 'og:url', content: 'https://invoice.taaskly.xyz/' },
-            { property: 'og:image', content: 'https://invoice.taaskly.xyz/logo_main.svg' },
+            { property: 'og:image', content: 'https://invoice.taaskly.xyz/logo.png' },
             { property: 'og:site_name', content: 'Taaskly' },
             {
                 property: 'og:description',
-                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
+                content: 'Create Custom Invoices with Taaskly Invoice - Fast & Professional'
             },
 
             { name: 'format-detection', content: 'telephone=no' }
