@@ -1,7 +1,9 @@
 <template>
-	<main class="grid md:grid-cols-2 gap-4 p-4 h-screen bg-light">
-		<InvoiceSetup />
-		<InvoiceOutput />
+	<main class="grid h-screen gap-4 p-4 md:grid-cols-2 bg-light">
+		<ClientOnly>
+			<InvoiceSetup />
+			<InvoiceOutput />
+		</ClientOnly>
 	</main>
 </template>
 
