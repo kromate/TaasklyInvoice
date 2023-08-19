@@ -1,5 +1,4 @@
 import { useStorage } from '@vueuse/core'
-import axios from 'axios'
 import { useCreateInvoice } from './create'
 import googleFonts from './fonts'
 import { insertGoogleFont } from '@/composables/utils'

@@ -1,4 +1,5 @@
-export const insertGoogleFont = (fontUrl: string, loadingCallback?: () => void): void => {
+export const insertGoogleFont = process.client
+  ? (fontUrl: string, loadingCallback?: () => void): void => {
   if (process.client && document.head.querySelectorAll(`link[href="${fontUrl}"]`).length > 0) {
     // Font is already loaded, so we don't need to import it again
     loadingCallback?.()
@@ -19,7 +20,8 @@ export const insertGoogleFont = (fontUrl: string, loadingCallback?: () => void):
       loadingCallback()
     }
   }
-}
+  }
+  : () => { }
 
 export const formatDate = (inputDate: Date): string => {
   return inputDate.toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })

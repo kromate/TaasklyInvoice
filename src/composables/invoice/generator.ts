@@ -1,6 +1,16 @@
-import jsPDF from 'jspdf'
 
-export const DownloadCanvasAsImage = (canvas: HTMLCanvasElement, name: string) => {
+let jsPDF: any
+
+if (process.client) {
+      import('jspdf').then((module) => {
+         jsPDF = module.default
+      })
+}
+
+// import jsPDF from 'jspdf'
+
+export const DownloadCanvasAsImage = process.client
+? (canvas: HTMLCanvasElement, name: string) => {
     const downloadLink = document.createElement('a')
     downloadLink.setAttribute('download', `${name}.png`)
     const dataURL = canvas.toDataURL('image/png')
@@ -8,6 +18,7 @@ export const DownloadCanvasAsImage = (canvas: HTMLCanvasElement, name: string) =
     downloadLink.setAttribute('href', url)
     downloadLink.click()
 }
+: () => { }
 
 export const DownloadCanvasAsPDF = (canvas: HTMLCanvasElement, name: string) => {
     // Create a new jsPDF instance

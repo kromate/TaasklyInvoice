@@ -1,30 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
 import eslintPlugin from 'vite-plugin-eslint'
+import app from './app.config'
 
 export default {
-	ssr: false,
+	ssr: true,
 	target: 'static',
-	app: {
-		head: {
-			title: 'Taaskly Invoice Generator',
-			desc: 'Taaskly Invoice Generator',
-			htmlAttrs: { lang: 'en' },
-			meta: [
-				{ charset: 'utf-8' },
-				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-				{ name: 'format-detection', content: 'telephone=no' },
-				{
-					name: 'title',
-					content: 'Taaskly Invoice Generator'
-				},
-				{
-					name: 'description',
-					content: 'Taaskly Invoice Generator'
-				}
-			],
-			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }]
-		}
-	},
+	app,
 
 	alias: {
 		'@': './src'
