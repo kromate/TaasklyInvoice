@@ -10,7 +10,7 @@ const globalData = ref({
 
 export const useFormatInvoice = (outputSection: HTMLElement, outputContainer: HTMLElement) => {
     const thElements = document.querySelectorAll<HTMLElement>('#output thead th')
-    const upElements = document.querySelectorAll<HTMLElement>('#output td.up')
+    const upElements = document.querySelectorAll<HTMLElement>('#output td')
     const attributionElement = document.querySelector<HTMLElement>('#attribution')
 
     // -bottom-20
