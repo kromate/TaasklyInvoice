@@ -1,4 +1,5 @@
 import { useStorage } from '@vueuse/core'
+import axios from 'axios'
 import { useCreateInvoice } from './create'
 import googleFonts from './fonts'
 import { insertGoogleFont } from '@/composables/utils'
@@ -16,6 +17,7 @@ export const useFormUsage = () => {
 }
 
 export const useGoogleFont = () => {
+    const loading = ref(false)
     const loadingFontLink = ref(false)
 
     watch(formCustomisationData.font_family, (val) => {
@@ -24,8 +26,7 @@ export const useGoogleFont = () => {
         insertGoogleFont(url, () => {
             loadingFontLink.value = false
         })
-        loadingFontLink.value = false
     }, { immediate: true })
 
-    return { fonts, loadingFontLink }
+    return { loading, fonts, loadingFontLink }
 }

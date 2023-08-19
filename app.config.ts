@@ -2,7 +2,7 @@
 export default {
 
     head: {
-        title: 'Taaskly Invoice - Create professional and customized invoices in seconds',
+        title: 'Taaskly Invoice - Professional, customized invoices in seconds',
         htmlAttrs: { lang: 'en' },
         meta: [
             { charset: 'utf-8' },
@@ -13,15 +13,15 @@ export default {
             },
             {
                 name: 'title',
-                content: 'Taaskly Invoice - Create professional and customized invoices in seconds'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
             {
                 name: 'description',
-                content: 'Taaskly Invoice - Create professional and customized invoices in seconds'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
             {
                 name: 'twitter:title',
-                content: 'Taaskly Invoice - Create professional and customized invoices in seconds'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
             { name: 'twitter:image', content: '/favicon.svg' },
             {
@@ -33,15 +33,15 @@ export default {
             { name: 'twitter:creator', content: '@taaskly' },
             {
                 property: 'og:title',
-                content: 'Taaskly Invoice - Create professional and customized invoices in seconds'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
             { property: 'og:type', content: 'site' },
             { property: 'og:url', content: 'https://invoice.taaskly.xyz/' },
-            { property: 'og:image', content: '/logo_text.svg' },
+            { property: 'og:image', content: 'https://invoice.taaskly.xyz/logo_main.svg' },
             { property: 'og:site_name', content: 'Taaskly' },
             {
                 property: 'og:description',
-                content: 'Taaskly Invoice - Create professional and customized invoices in seconds'
+                content: 'Taaskly Invoice - Professional, customized invoices in seconds'
             },
 
             { name: 'format-detection', content: 'telephone=no' }
