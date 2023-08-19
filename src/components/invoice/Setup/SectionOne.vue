@@ -4,10 +4,10 @@
 		<h4 class="form-title">
 			<span>Form colors</span>
 			<div class="flex items-center gap-2 md:gap-4">
-				<span class="text-xs text-grey_two cursor-pointer" @click="formCustomisationData.color_mode.value = !formCustomisationData.color_mode.value">
+				<span class="text-xs cursor-pointer text-grey_two" @click="formCustomisationData.color_mode.value = !formCustomisationData.color_mode.value">
 					({{ formCustomisationData.color_mode.value ? 'Color Picker':'Hex Code' }})
 				</span>
-				<button class="text-dark text-sm" type="button" @click="resetColors">
+				<button class="text-sm text-dark" type="button" @click="resetColors">
 					Reset
 				</button>
 			</div>
@@ -40,14 +40,14 @@
 		</div>
 		<h4 class="form-title">
 			<span>Form Logo</span>
-			<button class="text-dark text-sm" type="button" @click="resetLogo">
+			<button class="text-sm text-dark" type="button" @click="resetLogo">
 				Reset
 			</button>
 		</h4>
 		<div class="form-flex">
 			<div class="field">
 				<label for="logo">Select Logo</label>
-				<label for="logo" class="input-field center cursor-pointer justify-start">{{ formCustomisationData.logo.logoName.value }}</label>
+				<label for="logo" class="justify-start cursor-pointer input-field center">{{ formCustomisationData.logo.logoName.value }}</label>
 				<input id="logo" type="file" class="hidden" @change="updateLogo($event)">
 			</div>
 			<div class="field">
@@ -65,7 +65,7 @@
 
 		<h4 class="form-title">
 			<span>Form Font</span>
-			<button class="text-dark text-sm" type="button" @click="resetFont">
+			<button class="text-sm text-dark" type="button" @click="resetFont">
 				<Spinner v-if="loadingFontLink" size="20px" />
 				<span v-else>Reset</span>
 			</button>
@@ -73,10 +73,10 @@
 		<div class="grid grid-cols-1 gap-4 my-4">
 			<div class="field">
 				<label for="logo">Select Logo</label>
-				<SuggestionInput v-model="formCustomisationData.font_family.value" :options="fonts" :loading="loading || loadingFontLink" placeholder="Select Font" />
+				<SuggestionInput v-model="formCustomisationData.font_family.value" :options="fonts" :loading="loadingFontLink" placeholder="Select Font" />
 			</div>
 		</div>
-		<button class="modal-btn mt-12" type="submit">
+		<button class="mt-12 modal-btn" type="submit">
 			Continue
 		</button>
 	</form>
@@ -87,7 +87,7 @@ import { useCreateInvoice, useGoogleFont, useFormUsage } from '@/composables/inv
 
 const { formCustomisationData, resetColors, resetLogo, resetFont } = useCreateInvoice()
 const { step } = useFormUsage()
-const { loading, fonts, loadingFontLink } = useGoogleFont()
+const { fonts, loadingFontLink } = useGoogleFont()
 
 const updateLogo = (e: any) => {
 	const file = e.target.files[0]

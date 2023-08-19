@@ -16,7 +16,6 @@ export const useFormUsage = () => {
 }
 
 export const useGoogleFont = () => {
-    const loading = ref(false)
     const loadingFontLink = ref(false)
 
     watch(formCustomisationData.font_family, (val) => {
@@ -25,7 +24,8 @@ export const useGoogleFont = () => {
         insertGoogleFont(url, () => {
             loadingFontLink.value = false
         })
+        loadingFontLink.value = false
     }, { immediate: true })
 
-    return { loading, fonts, loadingFontLink }
+    return { fonts, loadingFontLink }
 }
