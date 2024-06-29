@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import eslintPlugin from 'vite-plugin-eslint'
-import app from './app.config'
+import app from './app_config'
 
 export default {
 	ssr: true,
@@ -18,7 +18,7 @@ export default {
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
 	],
-	modules: ['@nuxtjs/tailwindcss', 'nuxt-gtag', '@sidebase/nuxt-pdf'],
+	modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-pdf'],
 
 	build: {
 		postcss: {
