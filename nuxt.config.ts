@@ -18,7 +18,7 @@ export default {
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
 	],
-	modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-pdf'],
+	modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-pdf', 'nuxt-gtag'],
 
 	build: {
 		postcss: {
@@ -28,7 +28,7 @@ export default {
 	dir: {
 		layouts: './src/layouts',
 		pages: './src/pages',
-		middleware: './src/middleware'
+		middleware: './src/middlewares'
 	},
 	tailwindcss: {
 		cssPath: '@/assets/css/main.css'
