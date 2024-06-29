@@ -3,9 +3,9 @@
 </template>
 
 <script>
-    export default {
-
-    }
+definePageMeta({
+	layout: 'invoice'
+})
 </script>
 
 <style lang="scss" scoped>

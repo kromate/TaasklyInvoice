@@ -15,16 +15,13 @@
 			</defs>
 			<rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
 		</svg>
-		<div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-			<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-				<img class="w-40" src="@/assets/images/logo_text.svg" alt="Taaskly Logo">
-
-				<h1 class="mt-10 text-3xl font-bold tracking-tight text-dark sm:text-6xl">
+		<div class="mx-auto container px-4 lg:flex lg:px-0 mt-4 md:mt-20">
+			<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 ">
+				<h1 class=" text-4xl font-bold tracking-tight text-dark sm:text-6xl">
 					Create professional and customized invoices in seconds
 				</h1>
-				<p class="mt-6 text-lg leading-8 text-grey_two">
-					Say goodbye to the hassle of manual invoicing and hello to streamlined efficiency. Whether you're a freelancer, small business owner, or independent contractor,
-					<a href="https://taaskly.xyz" target="_blank" rel="noopener noreferrer" class="underline text-secondary">Taaskly</a> Invoice has got you covered.
+				<p class="mt-6 md:text-lg leading-8 text-grey_two">
+					Streamline your invoicing with 	<a href="https://taaskly.xyz" target="_blank" rel="noopener noreferrer" class="underline text-secondary">Taaskly</a>  Invoice, perfect for freelancers, small business owners, and independent contractors.
 				</p>
 				<div class="flex flex-col gap-3 text-secondary text-lg mt-4">
 					<span v-for="item in benefits" :key="item.name" class="flex items-center gap-3">
@@ -32,11 +29,11 @@
 						<span v-html="item.name" />
 					</span>
 				</div>
-				<div class="mt-10 flex items-center gap-x-6">
+				<div class="mt-10 flex items-center gap-6 flex-wrap">
 					<nuxt-link class="btn-secondary" to="/invoice">
-						Get started
+						Create an Invoice
 					</nuxt-link>
-					<a href="https://github.com/Taaskly/Taaskly-invoicer" target="_blank" class="text-sm font-semibold leading-6 text-dark">Star on Github <span aria-hidden="true">→</span></a>
+					<!-- <a href="https://github.com/Taaskly/Taaskly-invoicer" target="_blank" class="text-sm font-semibold leading-6 text-dark">Star on Github <span aria-hidden="true">→</span></a> -->
 				</div>
 			</div>
 			<div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
@@ -75,4 +72,5 @@ const benefits = ref([
 		icon: CheckCircleIcon
 	}
 ])
+
 </script>

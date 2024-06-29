@@ -8,7 +8,9 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+	layout: 'invoice'
+})
 </script>
 
 <style scoped>

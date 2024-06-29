@@ -1,7 +1,6 @@
 <template>
 	<div class=" min-h-screen">
 		<section class="flex flex-col">
-			<HeroNav />
 			<slot />
 		</section>
 	</div>
