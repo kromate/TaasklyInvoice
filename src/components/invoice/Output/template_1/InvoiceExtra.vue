@@ -20,14 +20,14 @@
 		</section>
 
 		<section class="flex flex-col items-end gap-2 text-right">
-			<!-- <div v-if="formExtraData.extra_fees.tax.value" class="flex-inline">
-				<p class="font-bold">
-					TAX : -
+			<div v-if="formExtraData.extra_fees.tax.value" class="flex-inline">
+				<p class="font-bold left">
+					VAT :
 				</p>
 				<p class="text-sm">
-					{{ formExtraData.extra_fees.tax.value }}
+					{{ convertToCurrency(formExtraData.extra_fees.tax.value) }}
 				</p>
-			</div> -->
+			</div>
 			<div v-if="formExtraData.extra_fees.delivery.value" class="flex-inline">
 				<p class="font-bold left">
 					Delivery :

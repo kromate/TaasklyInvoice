@@ -1,4 +1,3 @@
-
 let initializedClicks = false
 
 export default defineNuxtRouteMiddleware(async (to, from) => {

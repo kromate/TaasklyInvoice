@@ -1,4 +1,3 @@
-
 <template>
 	<nav aria-label="Progress" class="z-30 w-1/2 md:w-full">
 		<ol role="list" class="space-y-4 md:flex md:space-x-2 md:space-y-0 ">

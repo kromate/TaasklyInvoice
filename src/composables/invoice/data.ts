@@ -71,6 +71,9 @@ export const useFormData = () => {
         if (formExtraData.extra_fees.discount.value) {
             sum.value -= formExtraData.extra_fees.discount.value
         }
+        if (formExtraData.extra_fees.tax.value) {
+            sum.value += formExtraData.extra_fees.tax.value
+        }
         return sum
     })
     const removeItem = (id: number) => {

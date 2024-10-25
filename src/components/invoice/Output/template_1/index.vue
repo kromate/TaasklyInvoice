@@ -1,4 +1,3 @@
-
 <template>
 	<div id="output" class="w-full h-auto min-h-full p-4 relative mb-20" :style="formStyles">
 		<header class="flex gap-2 items-center border-b border-gray-300 pb-4">

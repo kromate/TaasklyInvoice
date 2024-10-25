@@ -1,4 +1,3 @@
-
 <template>
 	<form class="flex flex-col" @submit.prevent="DownloadOutput">
 		<h4 class="form-title">
@@ -15,17 +14,7 @@
 					class="input-field"
 				>
 			</div>
-			<!-- <div class="field">
-				<label for="from_address">Tax (%)</label>
-				<input
-					id="from_address"
-					v-model="formExtraData.extra_fees.tax.value"
-					placeholder="Enter percentage"
-					type="number"
-					class="input-field"
-					required
-				>
-			</div> -->
+
 			<div class="field">
 				<label for="from_address">Discount (NGN)</label>
 				<input
@@ -34,6 +23,17 @@
 					placeholder="Enter Discount"
 					type="number"
 					class="input-field"
+				>
+			</div>
+			<div class="field">
+				<label for="from_address">Tax (%)</label>
+				<input
+					id="from_address"
+					v-model="formExtraData.extra_fees.tax.value"
+					placeholder="Enter Amount"
+					type="number"
+					class="input-field"
+					required
 				>
 			</div>
 		</div>

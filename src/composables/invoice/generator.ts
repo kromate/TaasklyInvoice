@@ -1,4 +1,3 @@
-
 let jsPDF: any
 
 if (process.client) {

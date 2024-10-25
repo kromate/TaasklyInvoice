@@ -1,4 +1,3 @@
-
 <template>
 	<form class="flex flex-col" @submit.prevent="step++">
 		<h4 class="form-title">
